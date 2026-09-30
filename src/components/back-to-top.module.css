@@ -1,0 +1,61 @@
+.button {
+  position: fixed;
+  z-index: 30;
+  right: 24px;
+  bottom: 24px;
+  width: 46px;
+  height: 46px;
+  padding: 0;
+  border: 1px solid rgb(255 255 255 / 40%);
+  border-radius: 50%;
+  background: #075fe5;
+  display: grid;
+  place-items: center;
+  box-shadow: 0 6px 18px rgb(4 27 55 / 25%);
+  color: #fff;
+  cursor: pointer;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(10px) scale(0.94);
+  transition: opacity 200ms ease, transform 200ms cubic-bezier(0.2, 0.7, 0.2, 1), background 180ms ease;
+}
+
+.visible {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0) scale(1);
+}
+
+.button:hover {
+  background: #0b73f3;
+  transform: translateY(-2px);
+}
+
+.button:focus-visible {
+  outline: 3px solid #ffad16;
+  outline-offset: 3px;
+}
+
+.button svg {
+  width: 21px;
+  height: 21px;
+  stroke: currentColor;
+  stroke-width: 1.8;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+@media (max-width: 600px) {
+  .button {
+    right: 16px;
+    bottom: 16px;
+    width: 42px;
+    height: 42px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .button {
+    transition: none;
+  }
+}
