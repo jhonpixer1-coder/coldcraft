@@ -1,0 +1,374 @@
+.header {
+  --navy: #071b32;
+  --top-navy: #0d2948;
+  --gold: #ffad0a;
+  --cyan: #20a8f4;
+  width: 100%;
+  color: #eef5fc;
+  font-family: var(--font-geist-sans), sans-serif;
+}
+
+.utilityBar {
+  min-height: 43px;
+  background: var(--top-navy);
+  border-bottom: 1px solid rgb(184 209 232 / 15%);
+}
+
+.inner {
+  width: min(100% - 96px, 1440px);
+  min-height: inherit;
+  margin-inline: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.contactDetails,
+.utilityRight,
+.contactLink,
+.socialLinks {
+  display: flex;
+  align-items: center;
+}
+
+.contactDetails {
+  gap: 26px;
+}
+
+.contactLink {
+  gap: 9px;
+  color: #d7e2ee;
+  font-size: 12px;
+  font-weight: 500;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.contactLink svg {
+  width: 14px;
+  height: 14px;
+  stroke: var(--gold);
+  stroke-width: 1.8;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.utilityRight {
+  gap: 34px;
+}
+
+.openStatus {
+  min-height: 24px;
+  padding: 0 13px;
+  border-radius: 999px;
+  background: #173657;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: #d7e2ee;
+  font-size: 11px;
+  white-space: nowrap;
+}
+
+.statusDot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #2ad7a0;
+}
+
+.socialLinks {
+  gap: 20px;
+}
+
+.socialLinks a {
+  width: 17px;
+  height: 20px;
+  display: grid;
+  place-items: center;
+  color: #d3dfec;
+  transition: color 150ms ease;
+}
+
+.socialLinks a:hover,
+.contactLink:hover {
+  color: var(--gold);
+}
+
+.socialLinks svg {
+  width: 16px;
+  height: 16px;
+  fill: currentColor;
+}
+
+.socialLinks a:nth-child(3) svg,
+.socialLinks a:nth-child(4) svg {
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.8;
+}
+
+.socialLinks .socialDot,
+.socialLinks .playIcon {
+  fill: currentColor;
+  stroke: none;
+}
+
+.navigationBar {
+  min-height: 85px;
+  background: var(--navy);
+}
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 11px;
+  flex-shrink: 0;
+  color: inherit;
+  text-decoration: none;
+}
+
+.brandMark {
+  width: 48px;
+  height: 48px;
+  flex: 0 0 48px;
+  stroke: var(--cyan);
+  stroke-width: 1.8;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.brandMark path:last-of-type {
+  stroke: #f2f7fc;
+  stroke-width: 1.5;
+}
+
+.brandMark .brandCenter {
+  fill: var(--gold);
+  stroke: var(--gold);
+}
+
+.brandText {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+}
+
+.brandName {
+  color: #f6f8fb;
+  font-size: 20px;
+  font-weight: 750;
+  line-height: 1.2;
+  white-space: nowrap;
+}
+
+.brandName span {
+  color: var(--cyan);
+}
+
+.tagline {
+  color: #9db0c5;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.navigation {
+  align-self: stretch;
+  display: flex;
+  align-items: stretch;
+  gap: clamp(20px, 2.8vw, 38px);
+}
+
+.navLink {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  color: #d4deea;
+  font-size: 14px;
+  font-weight: 700;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: color 150ms ease;
+}
+
+.navLink:hover,
+.navLink.active {
+  color: #fff;
+}
+
+.navLink.active::after {
+  position: absolute;
+  right: 0;
+  bottom: 19px;
+  left: 0;
+  height: 3px;
+  border-radius: 2px;
+  background: var(--gold);
+  content: "";
+}
+
+.quoteButton {
+  min-height: 42px;
+  padding: 0 20px;
+  border-radius: 10px;
+  background: var(--gold);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  flex-shrink: 0;
+  color: #142033;
+  font-size: 14px;
+  font-weight: 750;
+  text-decoration: none;
+  transition: background 150ms ease, transform 150ms ease;
+}
+
+.quoteButton:hover {
+  background: #ffc044;
+  transform: translateY(-1px);
+}
+
+.quoteButton svg {
+  width: 16px;
+  height: 16px;
+  stroke: currentColor;
+  stroke-width: 1.8;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+@media (max-width: 1050px) {
+  .inner {
+    width: min(100% - 48px, 1440px);
+  }
+
+  .navigation {
+    gap: 18px;
+  }
+
+  .brandName {
+    font-size: 18px;
+  }
+
+  .quoteButton {
+    padding-inline: 14px;
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 800px) {
+  .navigationBar .inner {
+    min-height: 0;
+    padding-block: 15px;
+    flex-wrap: wrap;
+    gap: 14px 20px;
+  }
+
+  .navigation {
+    order: 3;
+    width: 100%;
+    min-height: 40px;
+    justify-content: space-between;
+    gap: 14px;
+  }
+
+  .navLink.active::after {
+    bottom: 0;
+  }
+
+  .quoteButton {
+    margin-left: auto;
+  }
+}
+
+@media (max-width: 560px) {
+  .inner {
+    width: calc(100% - 32px);
+  }
+
+  .utilityBar .inner {
+    min-height: 38px;
+  }
+
+  .contactDetails {
+    gap: 14px;
+  }
+
+  .contactLink {
+    gap: 6px;
+    font-size: 11px;
+  }
+
+  .contactLink:first-child {
+    display: none;
+  }
+
+  .utilityRight {
+    gap: 0;
+  }
+
+  .openStatus {
+    padding-inline: 9px;
+    font-size: 10px;
+  }
+
+  .socialLinks {
+    display: none;
+  }
+
+  .navigationBar .inner {
+    gap: 13px 10px;
+  }
+
+  .brand {
+    gap: 8px;
+  }
+
+  .brandMark {
+    width: 42px;
+    height: 42px;
+    flex-basis: 42px;
+  }
+
+  .brandName {
+    font-size: 16px;
+  }
+
+  .tagline {
+    font-size: 11px;
+  }
+
+  .quoteButton {
+    min-height: 38px;
+    padding-inline: 11px;
+    gap: 6px;
+    font-size: 12px;
+  }
+
+  .navigation {
+    gap: 8px;
+  }
+
+  .navLink {
+    font-size: 11px;
+  }
+}
+
+@media (max-width: 380px) {
+  .brandName {
+    font-size: 14px;
+  }
+
+  .quoteButton {
+    font-size: 11px;
+  }
+
+  .navigation {
+    gap: 5px;
+  }
+
+  .navLink {
+    font-size: 10px;
+  }
+}

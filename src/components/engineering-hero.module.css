@@ -1,0 +1,531 @@
+.section {
+  min-height: 650px;
+  padding: 22px 38px;
+  background:
+    radial-gradient(ellipse at 50% 100%, rgb(16 82 159 / 12%), transparent 58%),
+    #03142b;
+  display: grid;
+  place-items: center;
+}
+
+.panel {
+  position: relative;
+  isolation: isolate;
+  width: min(100%, 1440px);
+  min-height: 610px;
+  overflow: hidden;
+  border: 2px solid #485c75;
+  border-radius: 30px;
+  background:
+    radial-gradient(ellipse at 70% 48%, rgb(0 78 169 / 23%), transparent 42%),
+    linear-gradient(116deg, #081d38 0%, #031831 46%, #02142b 100%);
+  display: grid;
+  grid-template-columns: minmax(0, 1.04fr) minmax(0, 0.96fr);
+  align-items: stretch;
+  box-shadow: 0 24px 50px rgb(0 0 0 / 26%);
+  animation: panelEnter 700ms cubic-bezier(0.2, 0.7, 0.2, 1) both;
+}
+
+.panel::before {
+  position: absolute;
+  z-index: 3;
+  inset: 0;
+  border-radius: inherit;
+  background:
+    radial-gradient(circle at 96% 8%, rgb(74 144 236 / 40%) 1px, transparent 2px) right 26px top 34px / 16px 16px no-repeat,
+    linear-gradient(90deg, transparent 0%, transparent 43%, rgb(3 20 43 / 33%) 53%, transparent 78%);
+  content: "";
+  pointer-events: none;
+}
+
+.panel::after {
+  position: absolute;
+  z-index: 5;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: 3px;
+  background: linear-gradient(90deg, #087bff, #2d93ff 45%, #566f90 100%);
+  content: "";
+}
+
+.copy {
+  position: relative;
+  z-index: 4;
+  min-width: 0;
+  padding: 54px 20px 48px 68px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.eyebrow {
+  margin: 0;
+  color: #ffae12;
+  font-size: 13px;
+  font-weight: 750;
+  line-height: 1.35;
+  text-transform: uppercase;
+  animation: copyEnter 650ms 100ms cubic-bezier(0.2, 0.7, 0.2, 1) both;
+}
+
+.eyebrowRule {
+  width: 72px;
+  height: 2px;
+  margin: 13px 0 17px;
+  background: #ffae12;
+  display: block;
+  animation: lineEnter 600ms 180ms ease both;
+}
+
+.title {
+  margin: 0;
+  color: #f6f8fc;
+  font-size: 54px;
+  font-weight: 830;
+  line-height: 1.08;
+  animation: copyEnter 650ms 180ms cubic-bezier(0.2, 0.7, 0.2, 1) both;
+}
+
+.orange {
+  color: #ff9e15;
+}
+
+.blue {
+  color: #137df0;
+}
+
+.description {
+  max-width: 550px;
+  margin: 16px 0 25px;
+  color: #c7d0dd;
+  font-size: 15px;
+  line-height: 1.65;
+  animation: copyEnter 650ms 260ms cubic-bezier(0.2, 0.7, 0.2, 1) both;
+}
+
+.contactButton {
+  min-width: 238px;
+  min-height: 51px;
+  padding: 0 20px;
+  border-radius: 9px;
+  background: #ffa70d;
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  box-shadow: 0 9px 20px rgb(255 159 8 / 18%);
+  color: #101d30;
+  font-size: 15px;
+  font-weight: 750;
+  text-decoration: none;
+  transition: background 180ms ease, box-shadow 180ms ease, transform 180ms ease;
+  animation: copyEnter 650ms 320ms cubic-bezier(0.2, 0.7, 0.2, 1) both;
+}
+
+.contactButton:hover {
+  background: #ffbb39;
+  box-shadow: 0 12px 24px rgb(255 159 8 / 28%);
+  transform: translateY(-2px);
+}
+
+.contactButton svg {
+  width: 19px;
+  height: 19px;
+  flex: 0 0 19px;
+  stroke: currentColor;
+  stroke-width: 1.8;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.contactButton svg:first-child {
+  fill: currentColor;
+  stroke-width: 1.2;
+}
+
+.benefits {
+  width: min(100%, 610px);
+  min-height: 98px;
+  margin-top: 38px;
+  padding: 14px 12px;
+  border: 1px solid rgb(157 188 225 / 17%);
+  border-radius: 16px;
+  background: rgb(5 25 50 / 46%);
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  animation: copyEnter 650ms 390ms cubic-bezier(0.2, 0.7, 0.2, 1) both;
+}
+
+.benefit {
+  min-width: 0;
+  padding: 0 10px;
+  border-right: 1px solid rgb(157 188 225 / 20%);
+  display: grid;
+  grid-template-columns: 42px minmax(0, 1fr);
+  align-items: center;
+  gap: 10px;
+}
+
+.benefit:first-child {
+  padding-left: 4px;
+}
+
+.benefit:last-child {
+  padding-right: 2px;
+  border-right: 0;
+}
+
+.benefitIcon {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: #1163c8;
+  display: grid;
+  place-items: center;
+  color: #fff;
+  transition: background 180ms ease, transform 180ms ease;
+}
+
+.benefit:hover .benefitIcon {
+  background: #1781f5;
+  transform: translateY(-2px) rotate(-5deg);
+}
+
+.benefitIcon svg {
+  width: 23px;
+  height: 23px;
+  fill: currentColor;
+  stroke: currentColor;
+  stroke-width: 1.7;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.benefit:first-child .benefitIcon svg,
+.benefit:nth-child(2) .benefitIcon svg {
+  fill: none;
+}
+
+.benefitText {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.benefitTitle {
+  color: #f2f6fb;
+  font-size: 12px;
+  font-weight: 720;
+  line-height: 1.25;
+}
+
+.benefitDescription {
+  color: #aebed1;
+  font-size: 10px;
+  line-height: 1.4;
+}
+
+.visual {
+  position: relative;
+  min-width: 0;
+  min-height: 100%;
+  overflow: hidden;
+  isolation: isolate;
+}
+
+.visual::before {
+  position: absolute;
+  z-index: 2;
+  inset: 0;
+  background: linear-gradient(90deg, #04172f 0%, rgb(4 23 47 / 52%) 17%, transparent 52%);
+  content: "";
+  pointer-events: none;
+}
+
+.technicians {
+  z-index: 1;
+  object-fit: cover;
+  object-position: 56% center;
+  filter: brightness(0.88) saturate(0.9);
+  mask-image: linear-gradient(90deg, transparent 0%, #000 21%);
+  animation: imageEnter 900ms 120ms cubic-bezier(0.2, 0.7, 0.2, 1) both;
+  transition: filter 450ms ease, transform 850ms cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+
+.panel:hover .technicians {
+  filter: brightness(0.96) saturate(1.02);
+  transform: scale(1.025);
+}
+
+.visualShade {
+  position: absolute;
+  z-index: 3;
+  inset: 0;
+  background: linear-gradient(0deg, rgb(3 18 39 / 48%), transparent 28%, transparent 77%, rgb(3 18 39 / 15%));
+  pointer-events: none;
+}
+
+.orbit {
+  position: absolute;
+  z-index: 0;
+  top: 8%;
+  right: 6%;
+  width: min(86%, 500px);
+  aspect-ratio: 1;
+  border: 2px solid rgb(5 105 221 / 34%);
+  border-radius: 50%;
+  box-shadow: inset 0 0 0 18px rgb(6 67 139 / 9%), 0 0 0 18px rgb(6 67 139 / 7%);
+  animation: orbitPulse 5s ease-in-out infinite alternate;
+}
+
+.visualDots {
+  position: absolute;
+  z-index: 4;
+  top: 5%;
+  right: 5%;
+  width: 84px;
+  height: 80px;
+  background-image: radial-gradient(rgb(97 154 226 / 35%) 2px, transparent 2px);
+  background-size: 16px 16px;
+  pointer-events: none;
+}
+
+.contactButton:focus-visible {
+  outline: 3px solid #fff;
+  outline-offset: 4px;
+}
+
+@keyframes panelEnter {
+  from {
+    opacity: 0;
+    transform: translateY(14px) scale(0.99);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes copyEnter {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes lineEnter {
+  from {
+    opacity: 0;
+    transform: scaleX(0.3);
+    transform-origin: left;
+  }
+
+  to {
+    opacity: 1;
+    transform: scaleX(1);
+    transform-origin: left;
+  }
+}
+
+@keyframes imageEnter {
+  from {
+    opacity: 0;
+    transform: translateX(18px) scale(1.02);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0) scale(1);
+  }
+}
+
+@keyframes orbitPulse {
+  from {
+    transform: scale(0.97);
+    opacity: 0.55;
+  }
+
+  to {
+    transform: scale(1.03);
+    opacity: 1;
+  }
+}
+
+@media (max-width: 1050px) {
+  .section {
+    padding-inline: 24px;
+  }
+
+  .panel {
+    grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
+  }
+
+  .copy {
+    padding-left: 44px;
+  }
+
+  .title {
+    font-size: 46px;
+  }
+
+  .benefits {
+    margin-top: 28px;
+    padding-inline: 8px;
+  }
+
+  .benefit {
+    padding-inline: 7px;
+    grid-template-columns: 36px minmax(0, 1fr);
+    gap: 7px;
+  }
+
+  .benefitIcon {
+    width: 36px;
+    height: 36px;
+  }
+
+  .benefitTitle {
+    font-size: 11px;
+  }
+
+  .benefitDescription {
+    font-size: 9px;
+  }
+}
+
+@media (max-width: 760px) {
+  .section {
+    min-height: 0;
+    padding: 18px 16px;
+  }
+
+  .panel {
+    min-height: 0;
+    border-radius: 23px;
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .copy {
+    padding: 42px 28px 24px;
+  }
+
+  .title {
+    font-size: 42px;
+  }
+
+  .visual {
+    min-height: 0;
+    height: auto;
+    aspect-ratio: 1.18 / 1;
+    order: 2;
+  }
+
+  .visual::before {
+    background: linear-gradient(0deg, #04172f 0%, transparent 20%);
+  }
+
+  .technicians {
+    object-position: center 45%;
+    mask-image: linear-gradient(180deg, #000 0%, #000 82%, transparent 100%);
+  }
+
+  .benefits {
+    margin-top: 27px;
+  }
+}
+
+@media (max-width: 500px) {
+  .copy {
+    padding: 34px 20px 20px;
+  }
+
+  .eyebrow {
+    font-size: 10px;
+  }
+
+  .title {
+    font-size: 34px;
+  }
+
+  .description {
+    font-size: 13px;
+  }
+
+  .desktopBreak {
+    display: none;
+  }
+
+  .contactButton {
+    min-width: 205px;
+    min-height: 46px;
+    font-size: 14px;
+  }
+
+  .benefits {
+    min-height: 0;
+    margin-top: 24px;
+    padding: 10px 6px;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 0;
+  }
+
+  .benefit,
+  .benefit:first-child,
+  .benefit:last-child {
+    min-height: 61px;
+    padding: 7px 8px;
+    border-right: 0;
+    border-bottom: 1px solid rgb(157 188 225 / 17%);
+    grid-template-columns: 38px minmax(0, 1fr);
+  }
+
+  .benefit:last-child {
+    border-bottom: 0;
+  }
+
+  .benefitIcon {
+    width: 36px;
+    height: 36px;
+  }
+
+  .benefitTitle {
+    font-size: 12px;
+  }
+
+  .benefitDescription {
+    font-size: 10px;
+  }
+
+  .visual {
+    aspect-ratio: 1 / 1;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .panel,
+  .eyebrow,
+  .eyebrowRule,
+  .title,
+  .description,
+  .contactButton,
+  .benefits,
+  .technicians,
+  .orbit {
+    animation: none;
+  }
+
+  .contactButton,
+  .benefitIcon,
+  .technicians {
+    transition: none;
+  }
+}

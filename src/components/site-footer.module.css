@@ -1,0 +1,583 @@
+.footer {
+  position: relative;
+  overflow: hidden;
+  border-top: 5px solid #1762ce;
+  background:
+    radial-gradient(ellipse at 48% -15%, rgb(19 76 132 / 24%), transparent 55%),
+    linear-gradient(115deg, #061b34, #04182f 60%, #061d37);
+  color: #e8eef6;
+}
+
+.inner {
+  width: min(calc(100% - 96px), 1380px);
+  margin-inline: auto;
+}
+
+.columns {
+  padding: 62px 0 48px;
+  display: grid;
+  grid-template-columns: minmax(0, 1.2fr) minmax(145px, 0.65fr) minmax(0, 1.12fr) minmax(0, 1fr);
+  gap: 30px;
+}
+
+.brandColumn,
+.quickLinks,
+.contactColumn,
+.touchColumn {
+  min-width: 0;
+}
+
+.brand {
+  width: fit-content;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  color: inherit;
+  text-decoration: none;
+}
+
+.brandMark {
+  width: 66px;
+  height: 66px;
+  flex: 0 0 66px;
+  padding: 5px;
+  border: 3px solid #078fe1;
+  border-radius: 18px;
+  background: #f5f9ff;
+  stroke: #062443;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  transform: rotate(-8deg);
+}
+
+.brandWords {
+  display: flex;
+  flex-direction: column;
+  color: #f5f7fb;
+  font-size: 18px;
+  font-weight: 750;
+  line-height: 1.05;
+}
+
+.brandWords span:first-child {
+  color: #0da2f3;
+}
+
+.brandWords small {
+  margin-top: 5px;
+  color: #0da2f3;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.summary {
+  max-width: 300px;
+  margin: 25px 0 24px;
+  color: #c0ccdb;
+  font-size: 14px;
+  line-height: 1.75;
+}
+
+.socials {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.socials a {
+  width: 38px;
+  height: 38px;
+  border: 1px solid rgb(178 202 230 / 36%);
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  color: #e8eef6;
+  transition: border-color 180ms ease, background 180ms ease, color 180ms ease, transform 180ms ease;
+}
+
+.socials a:hover {
+  border-color: #0d8ef0;
+  background: #0d65c2;
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+.socials svg {
+  width: 18px;
+  height: 18px;
+  fill: currentColor;
+}
+
+.socials a:nth-child(4) svg,
+.socials a:nth-child(5) svg {
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.8;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.socials .socialDot,
+.socials .playIcon {
+  fill: currentColor;
+  stroke: none;
+}
+
+.quickLinks,
+.contactColumn,
+.touchColumn {
+  padding-left: 26px;
+  border-left: 1px solid rgb(176 197 224 / 15%);
+}
+
+.columnTitle {
+  margin: 2px 0 0;
+  color: #ffad16;
+  font-size: 17px;
+  font-weight: 750;
+  line-height: 1.35;
+}
+
+.titleRule {
+  width: 30px;
+  height: 3px;
+  margin: 13px 0 26px;
+  border-radius: 2px;
+  background: #087ce4;
+  display: block;
+}
+
+.quickLinks ul,
+.contactList {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.quickLinks ul {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.quickLinks li a {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  color: #e2eaf4;
+  font-size: 13px;
+  font-weight: 550;
+  text-decoration: none;
+  transition: color 170ms ease, transform 170ms ease;
+}
+
+.quickLinks li a span {
+  color: #1388f3;
+  font-size: 21px;
+  line-height: 0.8;
+}
+
+.quickLinks li a:hover {
+  color: #54b1ff;
+  transform: translateX(3px);
+}
+
+.contactList {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.contactList li {
+  display: grid;
+  grid-template-columns: 38px minmax(0, 1fr);
+  align-items: center;
+  gap: 12px;
+  color: #c6d1df;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.contactList a {
+  color: inherit;
+  text-decoration: none;
+  transition: color 160ms ease;
+}
+
+.contactList a:hover {
+  color: #57b6ff;
+}
+
+.contactList strong {
+  color: #168df1;
+  font-weight: 550;
+}
+
+.contactIcon {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: #104477;
+  display: grid;
+  place-items: center;
+  color: #eaf4ff;
+}
+
+.contactIcon svg {
+  width: 19px;
+  height: 19px;
+  stroke: currentColor;
+  stroke-width: 1.7;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.touchColumn > p {
+  margin: 0 0 20px;
+  color: #c0ccdb;
+  font-size: 13px;
+  line-height: 1.65;
+}
+
+.contactButton {
+  min-width: 164px;
+  min-height: 46px;
+  padding: 0 16px;
+  border-radius: 7px;
+  background: #0862dc;
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  color: #fff;
+  font-size: 13px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: background 180ms ease, transform 180ms ease, box-shadow 180ms ease;
+}
+
+.contactButton:hover {
+  background: #0a79f5;
+  box-shadow: 0 8px 17px rgb(0 70 166 / 27%);
+  transform: translateY(-2px);
+}
+
+.contactButton svg {
+  width: 18px;
+  height: 18px;
+  stroke: currentColor;
+  stroke-width: 1.7;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  transition: transform 180ms ease;
+}
+
+.contactButton:hover svg {
+  transform: translateX(3px);
+}
+
+.map {
+  position: relative;
+  height: 112px;
+  margin-top: 14px;
+  overflow: hidden;
+  display: block;
+}
+
+.mapShape {
+  position: absolute;
+  inset: 4px 0 0;
+  opacity: 0.45;
+  background-image: radial-gradient(#3d6a98 1px, transparent 1.2px);
+  background-size: 5px 5px;
+  mask-image:
+    radial-gradient(ellipse 23% 32% at 22% 43%, #000 58%, transparent 62%),
+    radial-gradient(ellipse 17% 24% at 43% 37%, #000 56%, transparent 62%),
+    radial-gradient(ellipse 12% 29% at 55% 65%, #000 56%, transparent 62%),
+    radial-gradient(ellipse 19% 25% at 76% 42%, #000 58%, transparent 62%);
+  mask-composite: add;
+  transition: opacity 200ms ease;
+}
+
+.map:hover .mapShape {
+  opacity: 0.75;
+}
+
+.mapPin {
+  position: absolute;
+  top: 36px;
+  left: 63%;
+  width: 28px;
+  height: 34px;
+  color: #fff;
+  filter: drop-shadow(0 3px 4px rgb(0 0 0 / 35%));
+  transition: transform 200ms ease;
+}
+
+.mapPin svg {
+  width: 100%;
+  height: 100%;
+  fill: #1179ed;
+  stroke: #fff;
+  stroke-width: 1.7;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.map:hover .mapPin {
+  transform: translateY(-4px);
+}
+
+.bottomBar {
+  min-height: 76px;
+  padding: 14px 0;
+  border-top: 1px solid rgb(176 197 224 / 16%);
+  display: grid;
+  grid-template-columns: 1fr auto auto;
+  align-items: center;
+  gap: 40px;
+}
+
+.bottomBar > p {
+  margin: 0;
+  color: #aebed1;
+  font-size: 12px;
+}
+
+.bottomBar nav {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.bottomBar nav a {
+  color: #c6d1df;
+  font-size: 12px;
+  text-decoration: none;
+  transition: color 160ms ease;
+}
+
+.bottomBar nav a:hover {
+  color: #59b7ff;
+}
+
+.bottomBar nav span {
+  width: 1px;
+  height: 15px;
+  background: #2d557f;
+}
+
+.whatsapp {
+  min-width: 174px;
+  min-height: 54px;
+  padding: 5px 14px 5px 6px;
+  border-radius: 999px;
+  background: #f7f9fc;
+  display: inline-flex;
+  align-items: center;
+  gap: 11px;
+  color: #172c4c;
+  text-decoration: none;
+  transition: transform 180ms ease, box-shadow 180ms ease;
+}
+
+.whatsapp:hover {
+  box-shadow: 0 5px 15px rgb(0 0 0 / 17%);
+  transform: translateY(-2px);
+}
+
+.whatsappIcon {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: #20bf62;
+  display: grid;
+  place-items: center;
+  color: #fff;
+}
+
+.whatsappIcon svg {
+  width: 28px;
+  height: 28px;
+  stroke: currentColor;
+  stroke-width: 1.7;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.whatsappText {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.whatsappText strong {
+  font-size: 12px;
+  font-weight: 750;
+}
+
+.whatsappText small {
+  color: #68768a;
+  font-size: 10px;
+}
+
+.contactButton:focus-visible,
+.socials a:focus-visible,
+.quickLinks a:focus-visible,
+.contactList a:focus-visible,
+.bottomBar a:focus-visible,
+.map:focus-visible {
+  outline: 2px solid #fff;
+  outline-offset: 3px;
+}
+
+@media (max-width: 1050px) {
+  .inner {
+    width: calc(100% - 56px);
+  }
+
+  .columns {
+    grid-template-columns: minmax(0, 1.1fr) minmax(130px, 0.7fr) minmax(0, 1.2fr);
+    gap: 24px;
+  }
+
+  .touchColumn {
+    grid-column: 1 / -1;
+    padding: 22px 0 0;
+    border-top: 1px solid rgb(176 197 224 / 15%);
+    border-left: 0;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: center;
+    gap: 10px 24px;
+  }
+
+  .touchColumn .columnTitle,
+  .touchColumn .titleRule,
+  .touchColumn > p {
+    grid-column: 1;
+  }
+
+  .touchColumn .titleRule {
+    margin: 0;
+  }
+
+  .touchColumn > p {
+    margin: 0;
+  }
+
+  .touchColumn .contactButton {
+    grid-column: 2;
+    grid-row: 1 / span 3;
+  }
+
+  .touchColumn .map {
+    display: none;
+  }
+
+  .bottomBar {
+    grid-template-columns: 1fr auto;
+    gap: 18px;
+  }
+
+  .bottomBar nav {
+    grid-column: 1;
+    grid-row: 2;
+  }
+
+  .whatsapp {
+    grid-column: 2;
+    grid-row: 1 / span 2;
+  }
+}
+
+@media (max-width: 700px) {
+  .inner {
+    width: calc(100% - 40px);
+  }
+
+  .columns {
+    padding: 42px 0 30px;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 34px 22px;
+  }
+
+  .brandColumn {
+    grid-column: 1 / -1;
+  }
+
+  .summary {
+    max-width: 480px;
+  }
+
+  .quickLinks,
+  .contactColumn {
+    padding-left: 0;
+    border-left: 0;
+  }
+
+  .touchColumn {
+    display: grid;
+  }
+
+  .bottomBar {
+    grid-template-columns: 1fr;
+    justify-items: start;
+    gap: 14px;
+  }
+
+  .bottomBar nav,
+  .whatsapp {
+    grid-column: 1;
+    grid-row: auto;
+  }
+}
+
+@media (max-width: 460px) {
+  .inner {
+    width: calc(100% - 36px);
+  }
+
+  .columns {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .brandColumn,
+  .touchColumn {
+    grid-column: auto;
+  }
+
+  .touchColumn {
+    grid-template-columns: 1fr;
+    border-top: 0;
+    padding-top: 0;
+  }
+
+  .touchColumn .columnTitle,
+  .touchColumn .titleRule,
+  .touchColumn > p,
+  .touchColumn .contactButton {
+    grid-column: 1;
+    grid-row: auto;
+  }
+
+  .bottomBar nav {
+    flex-wrap: wrap;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .socials a,
+  .quickLinks li a,
+  .contactList a,
+  .contactButton,
+  .contactButton svg,
+  .mapShape,
+  .mapPin,
+  .bottomBar nav a,
+  .whatsapp {
+    transition: none;
+  }
+}
