@@ -1,7 +1,7 @@
 .header {
   --navy: #071b32;
   --top-navy: #0d2948;
-  --gold: #ffad0a;
+  --gold: #20a8f4;
   --cyan: #20a8f4;
   width: 100%;
   color: #eef5fc;
@@ -204,7 +204,7 @@
   justify-content: center;
   gap: 12px;
   flex-shrink: 0;
-  color: #142033;
+  color: #fff;
   font-size: 14px;
   font-weight: 750;
   text-decoration: none;
@@ -212,7 +212,7 @@
 }
 
 .quoteButton:hover {
-  background: #ffc044;
+  background: #087ff0;
   transform: translateY(-1px);
 }
 
