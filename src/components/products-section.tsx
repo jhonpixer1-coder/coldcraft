@@ -5,7 +5,7 @@ const products = [
   {
     title: "HVAC Systems",
     description: "Efficient heating, ventilation & air conditioning solutions for optimal comfort.",
-    image: "/product-chiller.jpg",
+    image: "/hero-hvac.png",
     imageAlt: "Commercial HVAC equipment",
     icon: "snowflake",
     accent: "blue",
@@ -13,7 +13,7 @@ const products = [
   {
     title: "Fire Detection, Protection & Suppression Systems",
     description: "Advanced fire safety systems to detect, protect and save lives.",
-    image: "/product-fire.jpg",
+    image: "/fire.png",
     imageAlt: "Red fire-safety pipes and valves",
     icon: "flame",
     accent: "orange",
@@ -21,7 +21,7 @@ const products = [
   {
     title: "BMS (Building Management System)",
     description: "Smart building automation for efficiency, control & sustainability.",
-    image: "/hero-engineering.jpg",
+    image: "/company-team.jpg",
     imageAlt: "Engineer working with building systems",
     icon: "monitor",
     accent: "blue",
@@ -37,7 +37,7 @@ const products = [
   {
     title: "American Air Filter",
     description: "Reliable and efficient air filters for superior indoor air quality.",
-    image: "/product-filter.jpg",
+    image: "/filter.png",
     imageAlt: "Close-up of an air filter",
     icon: "filter",
     accent: "green",
@@ -45,7 +45,7 @@ const products = [
   {
     title: "Industrial Air Filters",
     description: "Durable air filtration solutions for industrial applications and environments.",
-    image: "/product-dust-collector.jpg",
+    image: "/filter.png",
     imageAlt: "Industrial dust collector and filtration equipment",
     icon: "industrial",
     accent: "purple",
