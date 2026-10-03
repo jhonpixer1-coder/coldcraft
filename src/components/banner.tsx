@@ -6,6 +6,7 @@ import styles from "./banner.module.css";
 
 const slides = [
   {
+    id: "engineering",
     eyebrow: "Cold Craft Engineering Ltd.",
     accent: "Smart",
     firstLine: "Engineering.",
@@ -13,9 +14,10 @@ const slides = [
     description: "Future-ready HVAC & fire systems that save energy and lives.",
     action: "Explore our services",
     href: "#products",
-    images: ["/hero-hvac.jpg", "/hero-installation.jpg", "/hero-engineering.jpg"],
+    images: ["/hero-hvac.png"],
   },
   {
+    id: "comfort",
     eyebrow: "Comfort, engineered.",
     accent: "Efficient",
     firstLine: "Systems.",
@@ -23,9 +25,10 @@ const slides = [
     description: "Thoughtful climate solutions for the places where life happens.",
     action: "Discover our projects",
     href: "#projects",
-    images: ["/hero-installation.jpg", "/hero-engineering.jpg", "/hero-hvac.jpg"],
+    images: ["/fire.png"],
   },
   {
+    id: "protection",
     eyebrow: "Protection by design.",
     accent: "Safety",
     firstLine: "Without Compromise.",
@@ -33,7 +36,18 @@ const slides = [
     description: "Integrated fire protection and expert installation, built around people.",
     action: "Talk to our team",
     href: "mailto:info@cce-bd.com",
-    images: ["/hero-engineering.jpg", "/hero-hvac.jpg", "/hero-installation.jpg"],
+    images: ["/bms.png"],
+  },
+  {
+    id: "air-quality",
+    eyebrow: "Clean air, engineered.",
+    accent: "Advanced",
+    firstLine: "Filtration.",
+    secondLine: "Healthier Environments.",
+    description: "Advanced filtration solutions for air quality control.",
+    action: "Talk to our team",
+    href: "mailto:info@cce-bd.com",
+    images: ["/filter.png"],
   },
 ];
 
@@ -133,7 +147,7 @@ export default function Banner() {
         {slides.map((item, slideIndex) => (
           <div
             className={`${styles.photoSlide} ${slideIndex === activeSlide ? styles.currentPhotoSlide : ""}`}
-            key={item.eyebrow}
+            key={item.id}
           >
             {item.images.map((image, imageIndex) => (
               <div
@@ -155,7 +169,7 @@ export default function Banner() {
 
       <div className={styles.inner}>
         <div className={styles.copy}>
-          <div className={styles.copyContent} key={slide.eyebrow} aria-live={isPlaying ? "off" : "polite"}>
+          <div className={styles.copyContent} key={slide.id} aria-live={isPlaying ? "off" : "polite"}>
             <p className={styles.eyebrow}>{slide.eyebrow}</p>
             <h1 className={styles.title} id="banner-title">
               <span>{slide.accent}</span> {slide.firstLine}
@@ -184,7 +198,7 @@ export default function Banner() {
                   type="button"
                   aria-label={`Show slide ${index + 1}: ${item.eyebrow}`}
                   aria-current={index === activeSlide ? "true" : undefined}
-                  key={item.eyebrow}
+                  key={item.id}
                   onClick={() => setActiveSlide(index)}
                 />
               ))}
@@ -240,13 +254,7 @@ export default function Banner() {
         ))}
       </div>
 
-      <a className={styles.contactBubble} href="mailto:info@cce-bd.com">
-        <span>Contact us</span>
-        <svg viewBox="0 0 28 28" fill="none" aria-hidden="true">
-          <path d="M23 13.6a9.2 9.2 0 0 1-13.6 8.1L4 23l1.4-5.1A9.2 9.2 0 1 1 23 13.6Z" />
-          <path d="M10 9.5c.4-.8.7-.8 1.1-.8.3 0 .5 0 .7.5l.8 1.8c.1.3.1.5-.1.7l-.7.9c-.2.2-.2.4-.1.7.7 1.3 1.8 2.4 3.1 3.1.3.2.5.1.7-.1l.9-1c.2-.2.4-.2.7-.1l1.8.9c.4.2.5.4.5.7 0 .5-.2 1-.7 1.4-.6.5-1.4.7-2.3.5-1.3-.2-3.2-1.1-5-2.9-1.7-1.7-2.7-3.7-2.9-5-.1-.7.2-1.3.6-1.3Z" />
-        </svg>
-      </a>
+      
     </section>
   );
 }

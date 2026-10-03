@@ -122,30 +122,17 @@
 .brand {
   display: inline-flex;
   align-items: center;
-  gap: 11px;
+  gap: 0;
   flex-shrink: 0;
   color: inherit;
   text-decoration: none;
 }
 
-.brandMark {
-  width: 48px;
-  height: 48px;
-  flex: 0 0 48px;
-  stroke: var(--cyan);
-  stroke-width: 1.8;
-  stroke-linecap: round;
-  stroke-linejoin: round;
-}
-
-.brandMark path:last-of-type {
-  stroke: #f2f7fc;
-  stroke-width: 1.5;
-}
-
-.brandMark .brandCenter {
-  fill: var(--gold);
-  stroke: var(--gold);
+.brandLogo {
+  width: 220px;
+  height: 80px;
+  flex: 0 0 auto;
+  object-fit: contain;
 }
 
 .brandText {
