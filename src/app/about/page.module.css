@@ -166,6 +166,177 @@
   line-height: 1.4;
 }
 
+.team {
+  padding: 18px 24px 38px;
+  background: #edf1f4;
+}
+
+.teamHeader {
+  width: min(100%, 1030px);
+  margin: 0 auto 24px;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(250px, 360px);
+  align-items: end;
+  gap: 18px;
+}
+
+.teamHeader h2 {
+  margin: 0;
+  color: #0f213c;
+  font-size: clamp(42px, 5vw, 74px);
+  font-weight: 800;
+  line-height: 0.95;
+  letter-spacing: -0.06em;
+}
+
+.teamHeader p {
+  margin: 0;
+  color: #566274;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.leadershipGrid {
+  width: min(100%, 1030px);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  border-top: 1px solid #cfd7df;
+  border-bottom: 1px solid #cfd7df;
+}
+
+.leaderCard {
+  padding: 28px 22px;
+  display: grid;
+  grid-template-columns: 200px minmax(0, 1fr);
+  gap: 26px;
+  align-items: center;
+}
+
+.leaderCard + .leaderCard {
+  border-left: 1px solid #cfd7df;
+}
+
+.memberPortrait,
+.memberPortraitSmall {
+  display: grid;
+  place-items: center;
+  position: relative;
+  overflow: hidden;
+  border-radius: 50%;
+  color: #fff;
+  box-shadow: inset 0 0 0 3px rgb(255 255 255 / 45%);
+  font-weight: 800;
+  letter-spacing: -0.06em;
+}
+
+.memberPortrait {
+  width: 180px;
+  height: 180px;
+  background: linear-gradient(135deg, #8ec2ff, #5aa4ff 45%, #2d76d7);
+}
+
+.memberPortrait[data-tone="sky"] {
+  background: linear-gradient(135deg, #b5e8ff, #7cc7f7 40%, #4ba2d8);
+}
+
+.memberPortraitSmall[data-tone="sand"] {
+  background: linear-gradient(135deg, #b3d8ff, #7ba9f1 52%, #4a72c9);
+}
+
+.memberPortraitSmall[data-tone="green"] {
+  background: linear-gradient(135deg, #b7f0d1, #76c7a7 52%, #388f73);
+}
+
+.memberPortraitSmall[data-tone="charcoal"] {
+  background: linear-gradient(135deg, #d0d5d8, #9aa4ad 50%, #566271);
+}
+
+.memberPortrait span,
+.memberPortraitSmall span {
+  font-size: 31px;
+  text-shadow: 0 1px 2px rgb(0 0 0 / 25%);
+}
+
+.memberPortraitSmall {
+  width: 86px;
+  height: 86px;
+  margin-inline: auto;
+  background: linear-gradient(135deg, #a9d6ff, #73a9e8 52%, #2f67ce);
+}
+
+.memberPortraitSmall span {
+  font-size: 20px;
+}
+
+.memberDetails {
+  min-width: 0;
+}
+
+.memberDetails h3,
+.directorMeta h3 {
+  margin: 0 0 4px;
+  color: #0f213c;
+  font-size: clamp(18px, 2vw, 26px);
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.role {
+  margin: 0 0 12px;
+  color: #0f213c;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.memberDetails p:not(.role) {
+  margin: 0;
+  color: #5c6978;
+  font-size: 16px;
+  line-height: 1.55;
+}
+
+.directorsWrap {
+  width: min(100%, 1030px);
+  margin: 0 auto;
+  padding-top: 18px;
+}
+
+.directorsLabel {
+  margin: 0 0 16px;
+  color: #57657a;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.directorGrid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.directorCard {
+  padding: 18px 16px 20px;
+  border: 1px solid #d6dde6;
+  border-radius: 16px;
+  background: rgba(255 255 255 / 42%);
+  display: grid;
+  grid-template-columns: 92px minmax(0, 1fr);
+  align-items: center;
+  gap: 16px;
+}
+
+.directorMeta h3 {
+  font-size: clamp(17px, 1.9vw, 23px);
+}
+
+.directorMeta p {
+  margin: 0;
+  color: #5d6879;
+  font-size: 12px;
+  line-height: 1.45;
+}
+
 .expertise {
   padding: 56px 24px 72px;
   background: #fff;
@@ -464,6 +635,25 @@
   }
 }
 
+@media (max-width: 900px) {
+  .teamHeader {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .leadershipGrid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .leaderCard + .leaderCard {
+    border-left: 0;
+    border-top: 1px solid #cfd7df;
+  }
+
+  .directorGrid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
 @media (max-width: 850px) {
   .overview {
     grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr);
@@ -518,6 +708,16 @@
   .whyLayout {
     max-width: 560px;
     grid-template-columns: minmax(0, 1fr);
+  }
+
+  .leaderCard {
+    grid-template-columns: minmax(0, 1fr);
+    justify-items: center;
+    text-align: center;
+  }
+
+  .memberDetails {
+    max-width: 360px;
   }
 
   .whyImage {

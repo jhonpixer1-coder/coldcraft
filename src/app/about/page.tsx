@@ -240,6 +240,76 @@ export default function AboutPage() {
           </div>
         </section>
 
+        <section className={styles.team} aria-labelledby="team-title">
+          <div className={styles.teamHeader}>
+            <h2 id="team-title">Meet our<br />leadership team</h2>
+            <p>The people behind Cold Craft&apos;s HVAC, fire protection and building automation work.</p>
+          </div>
+
+          <div className={styles.leadershipGrid}>
+            <article className={styles.leaderCard}>
+              <div className={styles.memberPortrait} data-tone="blue">
+                <span>SI</span>
+              </div>
+              <div className={styles.memberDetails}>
+                <h3>Md. Sadequl Islam</h3>
+                <p className={styles.role}>Chairman</p>
+                <p>
+                  We are proud to lead a team driven by excellence, innovation and integrity. Our legacy of cutting-edge engineering is built on collaboration, trust and purpose, and we will keep shaping a sustainable future through engineering brilliance.
+                </p>
+              </div>
+            </article>
+
+            <article className={styles.leaderCard}>
+              <div className={styles.memberPortrait} data-tone="sky">
+                <span>AR</span>
+              </div>
+              <div className={styles.memberDetails}>
+                <h3>Md. Azizur Rahman</h3>
+                <p className={styles.role}>Managing Director</p>
+                <p>
+                  From design to maintenance, we deliver advanced HVAC solutions with precision and care. Driven by innovation and best practices, we strive to exceed expectations and create long-lasting, high-performance environments for every client we serve.
+                </p>
+              </div>
+            </article>
+          </div>
+
+          <div className={styles.directorsWrap}>
+            <p className={styles.directorsLabel}>Directors</p>
+            <div className={styles.directorGrid}>
+              <article className={styles.directorCard}>
+                <div className={styles.memberPortraitSmall} data-tone="sand">
+                  <span>MH</span>
+                </div>
+                <div className={styles.directorMeta}>
+                  <h3>Md. Mehedi Hasan</h3>
+                  <p>Director, Accounts</p>
+                </div>
+              </article>
+
+              <article className={styles.directorCard}>
+                <div className={styles.memberPortraitSmall} data-tone="green">
+                  <span>PS</span>
+                </div>
+                <div className={styles.directorMeta}>
+                  <h3>Engr. Proloy Sarker</h3>
+                  <p>Director, Fire Detection, Protection &amp; Suppression System</p>
+                </div>
+              </article>
+
+              <article className={styles.directorCard}>
+                <div className={styles.memberPortraitSmall} data-tone="charcoal">
+                  <span>MR</span>
+                </div>
+                <div className={styles.directorMeta}>
+                  <h3>Mahmudur Rahman Rasel</h3>
+                  <p>Director, BMS System</p>
+                </div>
+              </article>
+            </div>
+          </div>
+        </section>
+
         <section className={styles.expertise} aria-labelledby="expertise-title">
           <header className={styles.sectionHeading}>
             <p className={styles.eyebrow}>Our Capabilities</p>
