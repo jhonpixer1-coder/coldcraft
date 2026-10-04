@@ -45,8 +45,8 @@ const products = [
   {
     title: "Industrial Air Filters",
     description: "Durable air filtration solutions for industrial applications and environments.",
-    image: "/filter.png",
-    imageAlt: "Industrial dust collector and filtration equipment",
+    image: "/industrial-air-filter.png",
+    imageAlt: "Industrial air filter panels for heavy-duty filtration",
     icon: "industrial",
     accent: "purple",
   },

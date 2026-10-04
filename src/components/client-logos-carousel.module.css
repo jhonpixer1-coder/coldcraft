@@ -235,6 +235,14 @@
   font-weight: 800;
 }
 
+.dbLogo {
+  display: block;
+  width: 170px;
+  height: auto;
+  object-fit: contain;
+  filter: drop-shadow(0 10px 14px rgb(15 73 164 / 11%));
+}
+
 .dbMark {
   position: absolute;
   top: -15px;

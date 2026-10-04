@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
 import styles from "./client-logos-carousel.module.css";
 
@@ -9,7 +10,7 @@ const clients = [
   { name: "ELTA Fans", wordmark: "ELTA", descriptor: "FANS", style: "elta" },
   { name: "Maple", wordmark: "MAPLE", descriptor: "", style: "maple" },
   { name: "AAF International", wordmark: "AAF", descriptor: "INTERNATIONAL", style: "aaf" },
-  { name: "DB", wordmark: "DB", descriptor: "", style: "db" },
+  { name: "DB", wordmark: "DB", descriptor: "", style: "db", image: "/db-logo.png" },
   { name: "Aermec", wordmark: "AERMEC", descriptor: "", style: "aermec" },
   { name: "Calpeda", wordmark: "calpeda", descriptor: "", style: "calpeda" },
   { name: "MayAir", wordmark: "MayAir", descriptor: "Clean Air, Our Future", style: "mayair" },
@@ -111,17 +112,30 @@ export default function ClientLogosCarousel() {
           >
             {clients.map((client) => (
               <div className={styles.logoItem} key={client.name}>
-                <div
-                  className={`${styles.wordmark} ${styles[client.style]}`}
-                  role="img"
-                  aria-label={client.name}
-                >
-                  {client.style === "lineLink" && <span className={styles.lineMark} aria-hidden="true" />}
-                  {client.style === "calpeda" && <span className={styles.calpedaMark} aria-hidden="true" />}
-                  {client.style === "db" && <span className={styles.dbMark} aria-hidden="true">✳</span>}
-                  <span className={styles.wordmarkText}>{client.wordmark}</span>
-                  {client.descriptor && <span className={styles.descriptor}>{client.descriptor}</span>}
-                </div>
+                {client.image ? (
+                  <div className={`${styles.wordmark} ${styles[client.style]}`} role="img" aria-label={client.name}>
+                    <Image
+                      src={client.image}
+                      alt={client.name}
+                      width={150}
+                      height={150}
+                      className={styles.dbLogo}
+                      priority={false}
+                    />
+                  </div>
+                ) : (
+                  <div
+                    className={`${styles.wordmark} ${styles[client.style]}`}
+                    role="img"
+                    aria-label={client.name}
+                  >
+                    {client.style === "lineLink" && <span className={styles.lineMark} aria-hidden="true" />}
+                    {client.style === "calpeda" && <span className={styles.calpedaMark} aria-hidden="true" />}
+                    {client.style === "db" && <span className={styles.dbMark} aria-hidden="true">✳</span>}
+                    <span className={styles.wordmarkText}>{client.wordmark}</span>
+                    {client.descriptor && <span className={styles.descriptor}>{client.descriptor}</span>}
+                  </div>
+                )}
               </div>
             ))}
           </div>

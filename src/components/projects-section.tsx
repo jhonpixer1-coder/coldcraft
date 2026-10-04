@@ -4,33 +4,33 @@ import styles from "./projects-section.module.css";
 const projects = [
   {
     company: "Global Capsule Ltd.",
-    image: "/hero-hvac.jpg",
-    imageAlt: "Industrial HVAC installation project",
+    image: "/global-capsule-ltd.png",
+    imageAlt: "Welding and fabrication work at a Global Capsule industrial project",
   },
   {
     company: "Beximco Pharmaceuticals Ltd.",
-    image: "/hero-installation.jpg",
-    imageAlt: "Engineering work in a pharmaceutical facility",
+    image: "/beximco-pharmaceuticals-ltd.png",
+    imageAlt: "HVAC duct installation inside a pharmaceutical facility under construction",
   },
   {
     company: "ACME Pharmaceuticals Ltd.",
-    image: "/product-chiller.jpg",
-    imageAlt: "Commercial mechanical systems installation",
+    image: "/acme-pharmaceuticals-ltd.png",
+    imageAlt: "HVAC ductwork and installation at an ACME Pharmaceuticals facility",
   },
   {
     company: "Getwell Pharmaceuticals Ltd.",
-    image: "/company-team.jpg",
-    imageAlt: "Industrial project team in safety equipment",
+    image: "/getwell-pharmaceuticals-ltd.png",
+    imageAlt: "Metal sheet installation and HVAC material handling at a pharmaceutical project site",
   },
   {
     company: "ACME Pharmaceuticals Ltd.",
-    image: "/company-commitment.jpg",
-    imageAlt: "Engineers working with industrial machinery",
+    image: "/acme-pharmaceuticals-ltd-2.png",
+    imageAlt: "Green industrial duct fabrication and welding at an ACME Pharmaceuticals installation site",
   },
   {
     company: "Atlas Pharmaceuticals Ltd.",
-    image: "/product-cleanroom.jpg",
-    imageAlt: "Cleanroom facility and controlled environment",
+    image: "/atlas-pharmaceuticals-ltd.png",
+    imageAlt: "HVAC duct installation and ceiling work at an Atlas Pharmaceuticals project site",
   },
 ];
 
