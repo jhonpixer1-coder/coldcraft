@@ -249,7 +249,12 @@ export default function AboutPage() {
           <div className={styles.leadershipGrid}>
             <article className={styles.leaderCard}>
               <div className={styles.memberPortrait} data-tone="blue">
-                <span>SI</span>
+                <Image
+                  src="/sadequl-islam.png"
+                  alt="Md. Sadequl Islam"
+                  fill
+                  sizes="180px"
+                />
               </div>
               <div className={styles.memberDetails}>
                 <h3>Md. Sadequl Islam</h3>
@@ -262,7 +267,12 @@ export default function AboutPage() {
 
             <article className={styles.leaderCard}>
               <div className={styles.memberPortrait} data-tone="sky">
-                <span>AR</span>
+                <Image
+                  src="/azizur-rahman.png"
+                  alt="Md. Azizur Rahman"
+                  fill
+                  sizes="180px"
+                />
               </div>
               <div className={styles.memberDetails}>
                 <h3>Md. Azizur Rahman</h3>
@@ -279,7 +289,12 @@ export default function AboutPage() {
             <div className={styles.directorGrid}>
               <article className={styles.directorCard}>
                 <div className={styles.memberPortraitSmall} data-tone="sand">
-                  <span>MH</span>
+                  <Image
+                    src="/mehedi-hasan.png"
+                    alt="Md. Mehedi Hasan"
+                    fill
+                    sizes="104px"
+                  />
                 </div>
                 <div className={styles.directorMeta}>
                   <h3>Md. Mehedi Hasan</h3>
@@ -289,7 +304,12 @@ export default function AboutPage() {
 
               <article className={styles.directorCard}>
                 <div className={styles.memberPortraitSmall} data-tone="green">
-                  <span>PS</span>
+                  <Image
+                    src="/proloy-sarker.png"
+                    alt="Engr. Proloy Sarker"
+                    fill
+                    sizes="104px"
+                  />
                 </div>
                 <div className={styles.directorMeta}>
                   <h3>Engr. Proloy Sarker</h3>
@@ -299,7 +319,12 @@ export default function AboutPage() {
 
               <article className={styles.directorCard}>
                 <div className={styles.memberPortraitSmall} data-tone="charcoal">
-                  <span>MR</span>
+                  <Image
+                    src="/mahmudur-rasel.jpeg"
+                    alt="Mahmudur Rahman Rasel"
+                    fill
+                    sizes="104px"
+                  />
                 </div>
                 <div className={styles.directorMeta}>
                   <h3>Mahmudur Rahman Rasel</h3>

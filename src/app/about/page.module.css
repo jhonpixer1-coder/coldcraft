@@ -211,6 +211,12 @@
   grid-template-columns: 200px minmax(0, 1fr);
   gap: 26px;
   align-items: center;
+  transition: transform 220ms ease, box-shadow 220ms ease, border-color 220ms ease;
+}
+
+.leaderCard:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 14px 28px rgb(15 35 60 / 10%);
 }
 
 .leaderCard + .leaderCard {
@@ -228,12 +234,20 @@
   box-shadow: inset 0 0 0 3px rgb(255 255 255 / 45%);
   font-weight: 800;
   letter-spacing: -0.06em;
+  transition: transform 220ms ease, box-shadow 220ms ease, filter 220ms ease;
 }
 
 .memberPortrait {
   width: 180px;
   height: 180px;
   background: linear-gradient(135deg, #8ec2ff, #5aa4ff 45%, #2d76d7);
+}
+
+.leaderCard:hover .memberPortrait,
+.leaderCard:hover .memberPortraitSmall {
+  transform: scale(1.04);
+  filter: saturate(1.08);
+  box-shadow: inset 0 0 0 3px rgb(255 255 255 / 45%), 0 10px 24px rgb(50 103 191 / 18%);
 }
 
 .memberPortrait[data-tone="sky"] {
@@ -259,14 +273,20 @@
 }
 
 .memberPortraitSmall {
-  width: 86px;
-  height: 86px;
+  width: 104px;
+  height: 104px;
   margin-inline: auto;
   background: linear-gradient(135deg, #a9d6ff, #73a9e8 52%, #2f67ce);
 }
 
 .memberPortraitSmall span {
-  font-size: 20px;
+  font-size: 24px;
+}
+
+.memberPortrait img,
+.memberPortraitSmall img {
+  z-index: 1;
+  object-fit: cover;
 }
 
 .memberDetails {
@@ -321,19 +341,27 @@
   border-radius: 16px;
   background: rgba(255 255 255 / 42%);
   display: grid;
-  grid-template-columns: 92px minmax(0, 1fr);
+  grid-template-columns: 110px minmax(0, 1fr);
   align-items: center;
-  gap: 16px;
+  gap: 18px;
+  transition: transform 220ms ease, box-shadow 220ms ease, border-color 220ms ease;
+}
+
+.directorCard:hover {
+  transform: translateY(-3px);
+  border-color: #bad0f4;
+  box-shadow: 0 12px 22px rgb(18 45 80 / 9%);
 }
 
 .directorMeta h3 {
-  font-size: clamp(17px, 1.9vw, 23px);
+  font-size: clamp(20px, 2.1vw, 28px);
+  line-height: 1.2;
 }
 
 .directorMeta p {
   margin: 0;
   color: #5d6879;
-  font-size: 12px;
+  font-size: 14px;
   line-height: 1.45;
 }
 
