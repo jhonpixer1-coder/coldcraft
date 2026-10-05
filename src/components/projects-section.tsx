@@ -91,7 +91,7 @@ export default function ProjectsSection() {
 
         <a
           className={styles.viewMore}
-          href="mailto:info@cce-bd.com?subject=More%20project%20information"
+          href="/projects"
         >
           View More Projects
           <svg viewBox="0 0 20 20" fill="none" aria-hidden="true">

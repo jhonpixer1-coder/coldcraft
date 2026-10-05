@@ -268,10 +268,11 @@ export default function AboutPage() {
             <article className={styles.leaderCard}>
               <div className={styles.memberPortrait} data-tone="sky">
                 <Image
-                  src="/azizur-rahman.png"
+                  src="/azizur-rahman-portrait.png"
                   alt="Md. Azizur Rahman"
                   fill
                   sizes="180px"
+                  style={{ objectPosition: "center 18%", transform: "scale(1.12)" }}
                 />
               </div>
               <div className={styles.memberDetails}>
@@ -320,14 +321,15 @@ export default function AboutPage() {
               <article className={styles.directorCard}>
                 <div className={styles.memberPortraitSmall} data-tone="charcoal">
                   <Image
-                    src="/mahmudur-rasel.jpeg"
-                    alt="Mahmudur Rahman Rasel"
+                    src="/mahmudur-rasel.png"
+                    alt="Mahmudur Rahman"
                     fill
                     sizes="104px"
+                    style={{ objectPosition: "center 12%", transform: "scale(1.08)" }}
                   />
                 </div>
                 <div className={styles.directorMeta}>
-                  <h3>Mahmudur Rahman Rasel</h3>
+                  <h3>Mahmudur Rahman</h3>
                   <p>Director, BMS System</p>
                 </div>
               </article>

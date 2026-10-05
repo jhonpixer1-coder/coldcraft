@@ -76,7 +76,17 @@ export default function SiteHeader({ activePage = "Home" }: { activePage?: strin
             {navigation.map((item) => (
               <a
                 className={`${styles.navLink} ${item === activePage ? styles.active : ""}`}
-                href={item === "Home" ? "/#home" : item === "About" ? "/about" : `/#${item.toLowerCase()}`}
+                href={
+                  item === "Home"
+                    ? "/#home"
+                    : item === "About"
+                      ? "/about"
+                      : item === "Projects"
+                        ? "/projects"
+                        : item === "Products"
+                          ? "/products"
+                          : `/#${item.toLowerCase()}`
+                }
                 aria-current={item === activePage ? "page" : undefined}
                 key={item}
               >

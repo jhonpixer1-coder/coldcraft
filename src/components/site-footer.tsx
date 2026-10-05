@@ -4,8 +4,8 @@ import styles from "./site-footer.module.css";
 const quickLinks = [
   { label: "Home", href: "/#home" },
   { label: "About Us", href: "/about" },
-  { label: "Projects", href: "/#projects" },
-  { label: "Products", href: "/#products" },
+  { label: "Projects", href: "/projects" },
+  { label: "Products", href: "/products" },
   { label: "Services", href: "/#products" },
   { label: "Contact Us", href: "/#contact" },
 ];

@@ -3,6 +3,7 @@ import styles from "./products-section.module.css";
 
 const products = [
   {
+    slug: "hvac-systems",
     title: "HVAC Systems",
     description: "Efficient heating, ventilation & air conditioning solutions for optimal comfort.",
     image: "/hero-hvac.png",
@@ -11,6 +12,7 @@ const products = [
     accent: "blue",
   },
   {
+    slug: "fire-detection-protection-suppression",
     title: "Fire Detection, Protection & Suppression Systems",
     description: "Advanced fire safety systems to detect, protect and save lives.",
     image: "/fire.png",
@@ -19,6 +21,7 @@ const products = [
     accent: "orange",
   },
   {
+    slug: "building-management-system",
     title: "BMS (Building Management System)",
     description: "Smart building automation for efficiency, control & sustainability.",
     image: "/company-team.jpg",
@@ -27,6 +30,7 @@ const products = [
     accent: "blue",
   },
   {
+    slug: "cleanroom-panels",
     title: "Cleanroom Panels",
     description: "High-performance panels for clean, controlled & contamination-free spaces.",
     image: "/product-cleanroom.jpg",
@@ -35,6 +39,7 @@ const products = [
     accent: "blue",
   },
   {
+    slug: "american-air-filter",
     title: "American Air Filter",
     description: "Reliable and efficient air filters for superior indoor air quality.",
     image: "/filter.png",
@@ -43,6 +48,7 @@ const products = [
     accent: "green",
   },
   {
+    slug: "industrial-air-filters",
     title: "Industrial Air Filters",
     description: "Durable air filtration solutions for industrial applications and environments.",
     image: "/industrial-air-filter.png",
@@ -143,7 +149,7 @@ export default function ProductsSection() {
                   <p className={styles.cardDescription}>{product.description}</p>
                   <a
                     className={`${styles.cardLink} ${styles[`${product.accent}Link`]}`}
-                    href={`mailto:info@cce-bd.com?subject=${encodeURIComponent(`Product enquiry: ${product.title}`)}`}
+                    href={`/products/${product.slug}`}
                   >
                     Explore Products
                     <svg viewBox="0 0 20 20" fill="none" aria-hidden="true">

@@ -1,0 +1,212 @@
+.page {
+  background: #f2f5f8;
+  color: #10233c;
+}
+
+.hero {
+  position: relative;
+  min-height: 220px;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+  background: #071d35;
+}
+
+.heroBackdrop {
+  position: absolute;
+  inset: 0;
+  background-image: linear-gradient(90deg, rgb(4 18 35 / 80%), rgb(4 18 35 / 58%)), url('/company-team.jpg');
+  background-size: cover;
+  background-position: center;
+  filter: saturate(0.8) contrast(1.08);
+}
+
+.heroContent {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  color: #fff;
+  padding: 42px 20px 30px;
+}
+
+.kicker {
+  margin: 0 0 8px;
+  color: #f1c55a;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.heroContent h1 {
+  margin: 0;
+  font-size: clamp(2.2rem, 4vw, 3.5rem);
+  font-weight: 800;
+  line-height: 1.1;
+}
+
+.breadcrumbs {
+  margin-top: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  color: rgb(255 255 255 / 80%);
+  font-size: 12px;
+}
+
+.breadcrumbs a {
+  color: rgb(255 255 255 / 85%);
+  text-decoration: none;
+}
+
+.breadcrumbs a:hover {
+  color: #fff;
+}
+
+.productsSection {
+  width: min(100%, 1160px);
+  margin: 0 auto;
+  padding: 42px 20px 72px;
+}
+
+.productsGrid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+}
+
+.productCard {
+  overflow: hidden;
+  border: 1px solid #dfe6ee;
+  border-radius: 16px;
+  background: rgb(255 255 255 / 94%);
+  box-shadow: 0 10px 28px rgb(10 25 43 / 05%);
+  transition: transform 180ms ease, box-shadow 180ms ease, border-color 180ms ease;
+}
+
+.productCard:hover {
+  transform: translateY(-4px);
+  border-color: #bfd3f4;
+  box-shadow: 0 18px 35px rgb(10 25 43 / 10%);
+}
+
+.imageFrame {
+  position: relative;
+  height: 220px;
+  background: #edf3fb;
+  border-bottom: 1px solid #edf1f6;
+}
+
+.imageFrame img {
+  object-fit: cover;
+  transition: transform 450ms ease, filter 300ms ease;
+}
+
+.productCard:hover .imageFrame img {
+  transform: scale(1.04);
+  filter: saturate(1.06);
+}
+
+.productBadge {
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  z-index: 1;
+  padding: 6px 10px;
+  border-radius: 999px;
+  background: rgb(14 35 61 / 78%);
+  color: #edf5ff;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.cardBody {
+  padding: 18px 18px 20px;
+}
+
+.cardMeta {
+  margin-bottom: 8px;
+}
+
+.cardMeta span {
+  display: inline-flex;
+  align-items: center;
+  padding: 5px 8px;
+  border-radius: 999px;
+  background: #edf5ff;
+  color: #0b5edd;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.cardBody h2 {
+  margin: 0 0 10px;
+  color: #11213d;
+  font-size: 1.15rem;
+  font-weight: 760;
+  line-height: 1.35;
+}
+
+.cardBody p {
+  margin: 0 0 18px;
+  color: #586b7f;
+  font-size: 0.83rem;
+  line-height: 1.6;
+}
+
+.readMore {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  min-height: 46px;
+  padding: 0 20px 0 22px;
+  border-radius: 999px;
+  background: linear-gradient(180deg, #0d89f5, #016dd9);
+  box-shadow: 0 10px 24px rgb(13 100 210 / 24%);
+  color: #fff;
+  font-size: 0.84rem;
+  font-weight: 800;
+  text-decoration: none;
+  transition: transform 180ms ease, box-shadow 180ms ease, filter 180ms ease;
+}
+
+.readMore svg {
+  width: 16px;
+  height: 16px;
+  stroke: currentColor;
+  stroke-width: 1.8;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.readMore:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 14px 28px rgb(13 100 210 / 30%);
+  filter: brightness(1.03);
+}
+
+@media (max-width: 920px) {
+  .productsGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 640px) {
+  .productsSection {
+    padding-top: 28px;
+  }
+
+  .productsGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .imageFrame {
+    height: 240px;
+  }
+}
