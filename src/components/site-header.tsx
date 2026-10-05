@@ -6,7 +6,7 @@ const navigation = ["Home", "About", "Projects", "Products", "Contact"];
 
 export default function SiteHeader({ activePage = "Home" }: { activePage?: string } = {}) {
   return (
-    <header className={styles.header} id="home">
+    <>
       <div className={styles.utilityBar}>
         <div className={styles.inner}>
           <div className={styles.contactDetails}>
@@ -59,50 +59,52 @@ export default function SiteHeader({ activePage = "Home" }: { activePage?: strin
         </div>
       </div>
 
-      <div className={styles.navigationBar}>
-        <div className={styles.inner}>
-          <Link className={styles.brand} href="/#home" aria-label="Cold Craft Engineering home">
-            <Image
-              className={styles.brandLogo}
-              src="/logo.png"
-              alt="Cold Craft Engineering logo"
-              width={220}
-              height={80}
-              priority
-            />
-          </Link>
+      <header className={styles.header} id="home">
+        <div className={styles.navigationBar}>
+          <div className={styles.inner}>
+            <Link className={styles.brand} href="/#home" aria-label="Cold Craft Engineering home">
+              <Image
+                className={styles.brandLogo}
+                src="/logo.png"
+                alt="Cold Craft Engineering logo"
+                width={220}
+                height={80}
+                priority
+              />
+            </Link>
 
-          <nav className={styles.navigation} aria-label="Main navigation">
-            {navigation.map((item) => (
-              <a
-                className={`${styles.navLink} ${item === activePage ? styles.active : ""}`}
-                href={
-                  item === "Home"
-                    ? "/#home"
-                    : item === "About"
-                      ? "/about"
-                      : item === "Projects"
-                        ? "/projects"
-                        : item === "Products"
-                          ? "/products"
-                          : `/#${item.toLowerCase()}`
-                }
-                aria-current={item === activePage ? "page" : undefined}
-                key={item}
-              >
-                {item}
-              </a>
-            ))}
-          </nav>
+            <nav className={styles.navigation} aria-label="Main navigation">
+              {navigation.map((item) => (
+                <a
+                  className={`${styles.navLink} ${item === activePage ? styles.active : ""}`}
+                  href={
+                    item === "Home"
+                      ? "/#home"
+                      : item === "About"
+                        ? "/about"
+                        : item === "Projects"
+                          ? "/projects"
+                          : item === "Products"
+                            ? "/products"
+                            : `/#${item.toLowerCase()}`
+                  }
+                  aria-current={item === activePage ? "page" : undefined}
+                  key={item}
+                >
+                  {item}
+                </a>
+              ))}
+            </nav>
 
-          <a className={styles.quoteButton} href="mailto:info@cce-bd.com?subject=Request%20a%20quote">
-            Request a quote
-            <svg aria-hidden="true" viewBox="0 0 20 20" fill="none">
-              <path d="M3.5 10h12m-5-5 5 5-5 5" />
-            </svg>
-          </a>
+            <a className={styles.quoteButton} href="mailto:info@cce-bd.com?subject=Request%20a%20quote">
+              Request a quote
+              <svg aria-hidden="true" viewBox="0 0 20 20" fill="none">
+                <path d="M3.5 10h12m-5-5 5 5-5 5" />
+              </svg>
+            </a>
+          </div>
         </div>
-      </div>
-    </header>
+      </header>
+    </>
   );
 }

@@ -1,11 +1,18 @@
+.utilityBar,
 .header {
   --navy: #071b32;
   --top-navy: #0d2948;
   --gold: #20a8f4;
   --cyan: #20a8f4;
-  width: 100%;
   color: #eef5fc;
   font-family: var(--font-geist-sans), sans-serif;
+}
+
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  width: 100%;
 }
 
 .utilityBar {
