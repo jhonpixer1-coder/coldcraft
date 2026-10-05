@@ -146,8 +146,8 @@
 .readMore {
   min-height: 46px;
   padding: 0 20px;
-  border-radius: 12px;
-  background: #087ff0;
+  border-radius: 7px;
+  background: #0862dc;
   display: inline-flex;
   align-items: center;
   gap: 13px;
@@ -159,7 +159,7 @@
 }
 
 .readMore:hover {
-  background: #1696ff;
+  background: #0a79f5;
   transform: translateY(-1px);
 }
 

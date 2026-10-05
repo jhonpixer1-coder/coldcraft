@@ -1,0 +1,155 @@
+.page {
+  background: #fff;
+  color: #14233a;
+}
+
+.hero {
+  position: relative;
+  min-height: 250px;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+  background: #071d35;
+}
+
+.heroBackdrop {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(90deg, rgb(4 18 35 / 76%), rgb(4 18 35 / 58%)),
+    url("/industrial-air-filter.png") center 50% / cover;
+}
+
+.heroContent {
+  position: relative;
+  z-index: 1;
+  padding: 36px 20px;
+  color: #fff;
+  text-align: center;
+}
+
+.heroContent h1 {
+  margin: 0;
+  font-size: clamp(2rem, 3.7vw, 3rem);
+  font-weight: 800;
+  letter-spacing: -0.035em;
+  line-height: 1.12;
+}
+
+.heroContent p {
+  margin: 9px 0 0;
+  color: #e7eef7;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.catalog {
+  width: min(100% - 40px, 1000px);
+  margin: 0 auto;
+  padding: 18px 0 32px;
+}
+
+.product {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  align-items: start;
+  gap: clamp(24px, 4vw, 48px);
+  padding: 12px 0;
+}
+
+.imageFrame {
+  position: relative;
+  min-height: 230px;
+  overflow: hidden;
+  background: #f5f7f9;
+}
+
+.imageFrame img {
+  object-fit: contain;
+}
+
+.productDetails {
+  min-width: 0;
+  padding: 6px 0;
+}
+
+.productDetails h2 {
+  margin: 0 0 6px;
+  color: #27232a;
+  font-size: 1rem;
+  font-weight: 650;
+  line-height: 1.35;
+}
+
+.productDetails p {
+  margin: 0;
+  color: #79767c;
+  font-size: 0.8rem;
+  line-height: 1.5;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 17px;
+}
+
+.contactButton {
+  min-width: 88px;
+  min-height: 42px;
+  padding: 0 15px;
+  border: 0;
+  border-radius: 7px;
+  background: #0862dc;
+  box-shadow: 0 7px 15px rgb(0 70 166 / 20%);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-decoration: none;
+  transition: background 180ms ease, transform 180ms ease, box-shadow 180ms ease;
+}
+
+.contactButton:hover {
+  background: #0a79f5;
+  transform: translateY(-1px);
+  box-shadow: 0 9px 19px rgb(0 70 166 / 28%);
+}
+
+.contactButton:focus-visible {
+  outline: 3px solid #147fe5;
+  outline-offset: 3px;
+}
+
+@media (max-width: 700px) {
+  .hero {
+    min-height: 205px;
+  }
+
+  .catalog {
+    width: min(100% - 32px, 560px);
+  }
+
+  .product {
+    grid-template-columns: 1fr;
+    gap: 10px;
+    padding: 12px 0 20px;
+  }
+
+  .imageFrame {
+    min-height: 240px;
+  }
+
+  .productDetails {
+    padding: 0 2px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .contactButton {
+    transition: none;
+  }
+}

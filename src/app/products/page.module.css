@@ -165,10 +165,10 @@
   justify-content: center;
   gap: 10px;
   min-height: 46px;
-  padding: 0 20px 0 22px;
-  border-radius: 999px;
-  background: linear-gradient(180deg, #0d89f5, #016dd9);
-  box-shadow: 0 10px 24px rgb(13 100 210 / 24%);
+  padding: 0 16px;
+  border-radius: 7px;
+  background: #0862dc;
+  box-shadow: 0 7px 15px rgb(0 70 166 / 22%);
   color: #fff;
   font-size: 0.84rem;
   font-weight: 800;
@@ -186,9 +186,9 @@
 }
 
 .readMore:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 14px 28px rgb(13 100 210 / 30%);
-  filter: brightness(1.03);
+  transform: translateY(-1px);
+  background: #0a79f5;
+  box-shadow: 0 9px 19px rgb(0 70 166 / 28%);
 }
 
 @media (max-width: 920px) {

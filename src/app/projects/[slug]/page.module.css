@@ -180,28 +180,40 @@
   justify-content: center;
   min-height: 44px;
   padding: 0 18px;
-  border-radius: 10px;
+  border: 0;
+  border-radius: 7px;
+  background: #0862dc;
+  color: #fff;
   font-size: 0.82rem;
   font-weight: 800;
+  gap: 12px;
   text-decoration: none;
   transition: transform 180ms ease, box-shadow 180ms ease, border-color 180ms ease;
 }
 
 .primaryButton {
-  background: linear-gradient(180deg, #f5bb35, #eaa317);
-  color: #12233d;
-  box-shadow: 0 10px 20px rgb(224 161 31 / 24%);
+  box-shadow: 0 7px 15px rgb(0 70 166 / 22%);
 }
 
 .secondaryButton {
-  border: 1px solid #d8e1ee;
-  background: #fff;
-  color: #1b2d48;
+  box-shadow: 0 7px 15px rgb(0 70 166 / 22%);
 }
 
 .primaryButton:hover,
 .secondaryButton:hover {
-  transform: translateY(-2px);
+  background: #0a79f5;
+  box-shadow: 0 9px 19px rgb(0 70 166 / 28%);
+  transform: translateY(-1px);
+}
+
+.primaryButton svg,
+.secondaryButton svg {
+  width: 16px;
+  height: 16px;
+  stroke: currentColor;
+  stroke-width: 1.8;
+  stroke-linecap: round;
+  stroke-linejoin: round;
 }
 
 @media (max-width: 860px) {

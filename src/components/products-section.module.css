@@ -178,17 +178,25 @@
 
 .cardLink {
   margin-top: auto;
+  min-height: 42px;
+  padding: 0 14px;
+  border-radius: 7px;
+  background: #0862dc;
   display: inline-flex;
   align-items: center;
+  justify-content: space-between;
   gap: 10px;
-  font-size: 11px;
+  color: #fff;
+  font-size: 12px;
   font-weight: 700;
   text-decoration: none;
+  transition: background 180ms ease, box-shadow 180ms ease, transform 180ms ease;
 }
 
 .cardLink:hover {
-  text-decoration: underline;
-  text-underline-offset: 3px;
+  background: #0a79f5;
+  box-shadow: 0 7px 15px rgb(0 70 166 / 22%);
+  transform: translateY(-1px);
 }
 
 .cardLink svg {
@@ -201,24 +209,23 @@
 }
 
 .blueLink {
-  color: #075ff1;
+  color: #fff;
 }
 
 .orangeLink {
-  color: #f06e09;
+  color: #fff;
 }
 
 .greenLink {
-  color: #2c9b58;
+  color: #fff;
 }
 
 .purpleLink {
-  color: #6e37c1;
+  color: #fff;
 }
 
 .cardLink:focus-visible {
-  border-radius: 2px;
-  outline: 2px solid currentColor;
+  outline: 3px solid #0862dc;
   outline-offset: 3px;
 }
 

@@ -250,10 +250,10 @@
 
 .contactButton {
   min-width: 138px;
-  min-height: 44px;
+  min-height: 46px;
   padding: 0 15px;
   border-radius: 7px;
-  background: #075fe5;
+  background: #0862dc;
   display: inline-flex;
   align-items: center;
   justify-content: space-between;
@@ -266,7 +266,7 @@
 }
 
 .contactButton:hover {
-  background: #0b70f7;
+  background: #0a79f5;
   box-shadow: 0 7px 15px rgb(7 95 229 / 22%);
   transform: translateY(-2px);
 }

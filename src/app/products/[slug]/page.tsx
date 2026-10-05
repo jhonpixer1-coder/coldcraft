@@ -4,6 +4,11 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import SiteHeader from "@/components/site-header";
 import SiteFooter from "@/components/site-footer";
+import BmsProductsCatalog from "@/components/bms-products-catalog";
+import CleanroomProductsCatalog from "@/components/cleanroom-products-catalog";
+import FireProductsCatalog from "@/components/fire-products-catalog";
+import HvacProductsCatalog from "@/components/hvac-products-catalog";
+import IndustrialAirFiltersCatalog from "@/components/industrial-air-filters-catalog";
 import { products } from "@/data/products";
 import styles from "./page.module.css";
 
@@ -44,7 +49,18 @@ export default async function ProductDetailPage({
   return (
     <>
       <SiteHeader activePage="Products" />
-      <main className={styles.page}>
+      {product.slug === "hvac-systems" ? (
+        <HvacProductsCatalog />
+      ) : product.slug === "fire-detection-protection-suppression" ? (
+        <FireProductsCatalog />
+      ) : product.slug === "building-management-system" ? (
+        <BmsProductsCatalog />
+      ) : product.slug === "cleanroom-panels" ? (
+        <CleanroomProductsCatalog />
+      ) : product.slug === "industrial-air-filters" ? (
+        <IndustrialAirFiltersCatalog />
+      ) : (
+        <main className={styles.page}>
         <section className={styles.hero} aria-labelledby="product-title">
           <div className={styles.heroBackdrop} />
           <div className={styles.heroContent}>
@@ -91,15 +107,22 @@ export default async function ProductDetailPage({
               <div className={styles.actions}>
                 <Link href="/products" className={styles.secondaryButton}>
                   Back to Products
+                  <svg viewBox="0 0 20 20" fill="none" aria-hidden="true">
+                    <path d="M3 10h13m-5-5 5 5-5 5" />
+                  </svg>
                 </Link>
                 <a href="mailto:info@cce-bd.com?subject=Product%20Enquiry%20-%20Cold%20Craft%20Engineering" className={styles.primaryButton}>
                   Request a quote
+                  <svg viewBox="0 0 20 20" fill="none" aria-hidden="true">
+                    <path d="M3 10h13m-5-5 5 5-5 5" />
+                  </svg>
                 </a>
               </div>
             </div>
           </div>
         </section>
-      </main>
+        </main>
+      )}
       <SiteFooter />
     </>
   );

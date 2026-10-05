@@ -195,10 +195,10 @@
 }
 
 .quoteButton {
-  min-height: 42px;
+  min-height: 46px;
   padding: 0 20px;
-  border-radius: 10px;
-  background: var(--gold);
+  border-radius: 7px;
+  background: #0862dc;
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -212,7 +212,7 @@
 }
 
 .quoteButton:hover {
-  background: #087ff0;
+  background: #0a79f5;
   transform: translateY(-1px);
 }
 
