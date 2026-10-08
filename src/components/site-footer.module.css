@@ -31,44 +31,15 @@
   width: fit-content;
   display: inline-flex;
   align-items: center;
-  gap: 10px;
   color: inherit;
   text-decoration: none;
 }
 
-.brandMark {
-  width: 66px;
-  height: 66px;
-  flex: 0 0 66px;
-  padding: 5px;
-  border: 3px solid #078fe1;
-  border-radius: 18px;
-  background: #f5f9ff;
-  stroke: #062443;
-  stroke-width: 2;
-  stroke-linecap: round;
-  stroke-linejoin: round;
-  transform: rotate(-8deg);
-}
-
-.brandWords {
-  display: flex;
-  flex-direction: column;
-  color: #f5f7fb;
-  font-size: 18px;
-  font-weight: 750;
-  line-height: 1.05;
-}
-
-.brandWords span:first-child {
-  color: #0da2f3;
-}
-
-.brandWords small {
-  margin-top: 5px;
-  color: #0da2f3;
-  font-size: 12px;
-  font-weight: 500;
+.brandLogo {
+  width: 220px;
+  height: 80px;
+  object-fit: contain;
+  object-position: left center;
 }
 
 .summary {

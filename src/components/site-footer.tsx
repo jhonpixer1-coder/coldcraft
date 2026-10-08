@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import styles from "./site-footer.module.css";
 
@@ -95,17 +96,13 @@ export default function SiteFooter() {
         <div className={styles.columns}>
           <section className={styles.brandColumn} aria-label="About Cold Craft Engineering">
             <Link className={styles.brand} href="/#home" aria-label="Cold Craft Engineering home">
-              <svg className={styles.brandMark} viewBox="0 0 48 48" fill="none" aria-hidden="true">
-                <circle cx="24" cy="24" r="22.5" />
-                <path d="M24 8v7m0 18v7M8 24h7m18 0h7M12.7 12.7l5 5m12.6 12.6 5 5m0-23.2-5 5m-12.6 12.6-5 5" />
-                <path d="m24 17 2.7 4.3 4.8 2.7-4.8 2.7L24 31l-2.7-4.3-4.8-2.7 4.8-2.7L24 17Z" />
-                <circle cx="24" cy="24" r="2.7" />
-              </svg>
-              <span className={styles.brandWords}>
-                <span><strong>Cold Craft</strong></span>
-                <span>Engineering Ltd.</span>
-                <small>Serving the Nation</small>
-              </span>
+              <Image
+                className={styles.brandLogo}
+                src="/logo.png"
+                alt="Cold Craft Engineering Ltd."
+                width={220}
+                height={80}
+              />
             </Link>
             <p className={styles.summary}>
               We provide high-quality HVAC systems, cleanroom solutions, and industrial engineering services with a commitment to excellence, reliability, and innovation.
