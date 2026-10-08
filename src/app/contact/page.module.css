@@ -1,0 +1,222 @@
+.page {
+  position: relative;
+  isolation: isolate;
+  padding: 50px 24px 52px;
+  background: #eef3f6;
+  color: #0d243a;
+}
+
+.background {
+  position: absolute;
+  z-index: -1;
+  inset: 0 0 32px;
+  overflow: hidden;
+  background: #0d243a;
+}
+
+.background::after {
+  position: absolute;
+  right: -130px;
+  bottom: 0;
+  width: 340px;
+  height: 330px;
+  border: 2px solid rgb(134 168 198 / 10%);
+  border-radius: 38px;
+  content: "";
+  box-shadow:
+    0 0 0 30px #0d243a,
+    0 0 0 32px rgb(134 168 198 / 9%),
+    0 0 0 62px #0d243a,
+    0 0 0 64px rgb(134 168 198 / 8%);
+}
+
+.content {
+  width: min(100%, 854px);
+  margin-inline: auto;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 416px);
+  align-items: start;
+  gap: 44px;
+}
+
+.intro {
+  padding-top: 2px;
+  color: #f7f9fc;
+}
+
+.officeHours {
+  width: fit-content;
+  min-height: 32px;
+  margin: 0 0 25px;
+  padding: 0 11px;
+  border: 1px solid rgb(194 216 236 / 20%);
+  border-radius: 999px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: #eef4fb;
+  font-size: 10px;
+}
+
+.officeHours span {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #2dd78c;
+}
+
+.intro h1 {
+  max-width: 340px;
+  margin: 0;
+  color: #fff;
+  font-size: clamp(38px, 4.1vw, 48px);
+  font-weight: 800;
+  letter-spacing: -0.055em;
+  line-height: 1.16;
+}
+
+.description {
+  max-width: 410px;
+  margin: 18px 0 26px;
+  color: #bbcee0;
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+.contactMethods {
+  display: grid;
+  gap: 10px;
+}
+
+.contactCard {
+  min-height: 63px;
+  padding: 10px 14px;
+  border: 1px solid rgb(194 216 236 / 13%);
+  border-radius: 12px;
+  background: rgb(255 255 255 / 6%);
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  color: #fff;
+  text-decoration: none;
+  transition: border-color 160ms ease, background 160ms ease;
+}
+
+.contactCard:hover {
+  border-color: rgb(247 163 22 / 65%);
+  background: rgb(255 255 255 / 10%);
+}
+
+.contactIcon {
+  width: 36px;
+  height: 36px;
+  flex: 0 0 36px;
+  border-radius: 10px;
+  background: #f6a216;
+  display: grid;
+  place-items: center;
+  color: #101f2f;
+}
+
+.contactIcon svg {
+  width: 19px;
+  height: 19px;
+  stroke: currentColor;
+  stroke-width: 1.8;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.contactText {
+  min-width: 0;
+  display: grid;
+  gap: 2px;
+}
+
+.contactText small {
+  color: #b8cadb;
+  font-size: 10px;
+}
+
+.contactText strong {
+  overflow-wrap: anywhere;
+  font-size: 15px;
+  font-weight: 750;
+  line-height: 1.2;
+}
+
+@media (max-width: 760px) {
+  .page {
+    padding-top: 38px;
+  }
+
+  .background {
+    bottom: 24px;
+  }
+
+  .content {
+    max-width: 520px;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 30px;
+  }
+
+  .intro h1 {
+    max-width: 500px;
+  }
+
+  .description {
+    margin-bottom: 20px;
+  }
+
+  .contactMethods {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 8px;
+  }
+
+  .contactCard {
+    min-height: 98px;
+    padding: 11px;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .contactText strong {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .page {
+    padding: 32px 16px 40px;
+  }
+
+  .officeHours {
+    margin-bottom: 19px;
+    font-size: 9px;
+  }
+
+  .intro h1 {
+    font-size: 39px;
+  }
+
+  .description {
+    font-size: 13px;
+  }
+
+  .contactMethods {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .contactCard {
+    min-height: 62px;
+    align-items: center;
+    flex-direction: row;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .contactCard {
+    transition: none;
+  }
+}

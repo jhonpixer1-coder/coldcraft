@@ -86,7 +86,7 @@ export default function SiteHeader({ activePage = "Home" }: { activePage?: strin
                           ? "/projects"
                           : item === "Products"
                             ? "/products"
-                            : `/#${item.toLowerCase()}`
+                            : "/contact"
                   }
                   aria-current={item === activePage ? "page" : undefined}
                   key={item}

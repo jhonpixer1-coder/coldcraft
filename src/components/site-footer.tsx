@@ -7,7 +7,7 @@ const quickLinks = [
   { label: "Projects", href: "/projects" },
   { label: "Products", href: "/products" },
   { label: "Services", href: "/#products" },
-  { label: "Contact Us", href: "/#contact" },
+  { label: "Contact Us", href: "/contact" },
 ];
 
 function ContactIcon({ name }: { name: "pin" | "phone" | "mail" | "clock" }) {
