@@ -111,12 +111,12 @@ export default async function ProductDetailPage({
                     <path d="M3 10h13m-5-5 5 5-5 5" />
                   </svg>
                 </Link>
-                <a href="mailto:info@cce-bd.com?subject=Product%20Enquiry%20-%20Cold%20Craft%20Engineering" className={styles.primaryButton}>
+                <Link href="/contact" className={styles.primaryButton}>
                   Request a quote
                   <svg viewBox="0 0 20 20" fill="none" aria-hidden="true">
                     <path d="M3 10h13m-5-5 5 5-5 5" />
                   </svg>
-                </a>
+                </Link>
               </div>
             </div>
           </div>

@@ -13,7 +13,7 @@ const inquiryTypes = [
 
 export default function ContactInquiry() {
   const [inquiryType, setInquiryType] = useState(inquiryTypes[0]);
-  const [submissionMessage, setSubmissionMessage] = useState("");
+  const [gmailComposeUrl, setGmailComposeUrl] = useState("");
 
   function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
@@ -35,10 +35,16 @@ export default function ContactInquiry() {
       project || "Not provided",
     ].join("\n");
 
-    window.location.href = `mailto:midnght23@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-    setSubmissionMessage(
-      "Your email app should open with your inquiry ready to send. If it doesn't, email midnght23@gmail.com directly.",
-    );
+    const composeUrl = new URL("https://mail.google.com/mail/");
+    composeUrl.searchParams.set("view", "cm");
+    composeUrl.searchParams.set("fs", "1");
+    composeUrl.searchParams.set("to", "azizur.ruet@gmail.com");
+    composeUrl.searchParams.set("su", subject);
+    composeUrl.searchParams.set("body", body);
+
+    const url = composeUrl.toString();
+    setGmailComposeUrl(url);
+    window.open(url, "_blank", "noopener,noreferrer");
   }
 
   return (
@@ -114,7 +120,16 @@ export default function ContactInquiry() {
         </button>
         <p className={styles.hint}>Fields marked * are required.</p>
         <p className={styles.status} aria-live="polite">
-          {submissionMessage}
+          {gmailComposeUrl && (
+            <>
+              Gmail compose is ready with your inquiry. Review it and press
+              {" "}Send. If it didn&apos;t open,{" "}
+              <a href={gmailComposeUrl} target="_blank" rel="noopener noreferrer">
+                open Gmail compose
+              </a>
+              .
+            </>
+          )}
         </p>
       </form>
     </section>

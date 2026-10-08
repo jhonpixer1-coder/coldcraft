@@ -24,7 +24,7 @@ const products = [
     slug: "building-management-system",
     title: "BMS (Building Management System)",
     description: "Smart building automation for efficiency, control & sustainability.",
-    image: "/company-team.jpg",
+    image: "/bms-building-management.png",
     imageAlt: "Engineer working with building systems",
     icon: "monitor",
     accent: "blue",

@@ -96,7 +96,7 @@ export default function SiteHeader({ activePage = "Home" }: { activePage?: strin
               ))}
             </nav>
 
-            <a className={styles.quoteButton} href="mailto:info@cce-bd.com?subject=Request%20a%20quote">
+            <a className={styles.quoteButton} href="/contact">
               Request a quote
               <svg aria-hidden="true" viewBox="0 0 20 20" fill="none">
                 <path d="M3.5 10h12m-5-5 5 5-5 5" />

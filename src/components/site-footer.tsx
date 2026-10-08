@@ -163,12 +163,12 @@ export default function SiteFooter() {
             <h2 className={styles.columnTitle} id="footer-touch-title">Get In Touch</h2>
             <span className={styles.titleRule} aria-hidden="true" />
             <p>We&apos;re here to help! Reach out to us for any inquiries or support.</p>
-            <a className={styles.contactButton} href="tel:+8801722353205">
+            <Link className={styles.contactButton} href="/contact">
               Contact Us
               <svg viewBox="0 0 20 20" fill="none" aria-hidden="true">
                 <path d="M3 10h13m-5-5 5 5-5 5" />
               </svg>
-            </a>
+            </Link>
             <a
               className={styles.map}
               href="https://www.google.com/maps/search/?api=1&query=2%2FM%2F3+Golden+Street%2C+Ring+Road%2C+Shamoly%2C+Mohammadpur%2C+Dhaka-1207"

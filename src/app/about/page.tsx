@@ -403,7 +403,7 @@ export default function AboutPage() {
             <h2 id="about-cta-title">Engineering comfort, together.</h2>
             <p>Talk with our team about your next HVAC, cleanroom, or industrial project.</p>
           </div>
-          <a href="tel:+8801722353205">Contact Our Team <span aria-hidden="true">→</span></a>
+          <Link href="/contact">Contact Our Team <span aria-hidden="true">→</span></Link>
         </section>
       </main>
       <SiteFooter />

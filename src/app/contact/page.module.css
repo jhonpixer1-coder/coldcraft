@@ -1,7 +1,7 @@
 .page {
   position: relative;
   isolation: isolate;
-  padding: 50px 24px 52px;
+  padding: 50px 24px 0;
   background: #eef3f6;
   color: #0d243a;
 }
@@ -147,7 +147,7 @@
 
 @media (max-width: 760px) {
   .page {
-    padding-top: 38px;
+    padding: 38px 24px 0;
   }
 
   .background {
@@ -188,7 +188,7 @@
 
 @media (max-width: 480px) {
   .page {
-    padding: 32px 16px 40px;
+    padding: 32px 16px 0;
   }
 
   .officeHours {

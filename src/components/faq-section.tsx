@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { useState } from "react";
 import styles from "./faq-section.module.css";
 
@@ -141,12 +142,12 @@ export default function FaqSection() {
             <h3>Can&apos;t find what you&apos;re looking for?</h3>
             <p>We&apos;re here to help! Get in touch with our team for personalized assistance.</p>
           </div>
-          <a className={styles.contactButton} href="tel:+8801722353205">
+          <Link className={styles.contactButton} href="/contact">
             Contact Us
             <svg viewBox="0 0 20 20" fill="none" aria-hidden="true">
               <path d="M3 10h13m-5-5 5 5-5 5" />
             </svg>
-          </a>
+          </Link>
         </aside>
       </div>
     </section>

@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import SiteFooter from "@/components/site-footer";
 import SiteHeader from "@/components/site-header";
 import ContactInquiry from "@/components/contact-inquiry";
+import OfficeVisit from "@/components/office-visit";
+import CareerApplication from "@/components/career-application";
 import styles from "./page.module.css";
 
 export const metadata: Metadata = {
@@ -76,7 +78,9 @@ export default function ContactPage() {
 
           <ContactInquiry />
         </div>
+        <OfficeVisit />
       </main>
+      <CareerApplication />
       <SiteFooter />
     </>
   );

@@ -48,8 +48,8 @@ export const products: Product[] = [
     title: "BMS (Building Management System)",
     category: "Building Automation",
     location: "Bangladesh",
-    image: "/company-team.jpg",
-    imageAlt: "Engineer working with building systems",
+    image: "/bms-building-management.png",
+    imageAlt: "Building management system engineer monitoring building controls",
     shortDescription: "Smart building automation to improve monitoring, control, and operational efficiency.",
     description:
       "Our Building Management Systems help operators monitor, automate, and optimize environmental and mechanical performance. From HVAC coordination to alerting and scheduling, the systems support smarter, safer, and more efficient building operations.",

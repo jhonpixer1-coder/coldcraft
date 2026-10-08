@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import styles from "./engineering-hero.module.css";
 
 const benefits = [
@@ -69,7 +70,7 @@ export default function EngineeringHero() {
             From advanced HVAC systems to complete engineering solutions,
             <br className={styles.desktopBreak} /> we deliver comfort, efficiency, and reliability you can trust.
           </p>
-          <a className={styles.contactButton} href="tel:+8801722353205">
+          <Link className={styles.contactButton} href="/contact">
             <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
               <path d="M7.2 3.5H4.8a1.3 1.3 0 0 0-1.3 1.4c.8 8.3 7 14.5 15.3 15.3a1.3 1.3 0 0 0 1.4-1.3v-2.4a1.3 1.3 0 0 0-1.1-1.3l-3.2-.5a1.3 1.3 0 0 0-1.2.4l-1.4 1.4a15.2 15.2 0 0 1-5-5l1.4-1.4a1.3 1.3 0 0 0 .4-1.2l-.5-3.2a1.3 1.3 0 0 0-1.4-1.2Z" />
             </svg>
@@ -77,7 +78,7 @@ export default function EngineeringHero() {
             <svg viewBox="0 0 20 20" fill="none" aria-hidden="true">
               <path d="M3 10h13m-5-5 5 5-5 5" />
             </svg>
-          </a>
+          </Link>
 
           <div className={styles.benefits} aria-label="Our strengths">
             {benefits.map((benefit) => (

@@ -36,7 +36,7 @@ const slides = [
     description: "Integrated fire protection and expert installation, built around people.",
     action: "Talk to our team",
     href: "mailto:info@cce-bd.com",
-    images: ["/bms.png"],
+    images: ["/bms-building-management.png"],
   },
   {
     id: "air-quality",

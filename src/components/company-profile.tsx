@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import styles from "./company-profile.module.css";
 
 const values = [
@@ -153,7 +154,7 @@ export default function CompanyProfile() {
             </article>
           </div>
 
-          <a className={styles.contactButton} href="mailto:info@cce-bd.com">
+          <Link className={styles.contactButton} href="/contact">
             <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
               <path d="M7.5 3.5H5.3a1.4 1.4 0 0 0-1.4 1.4c.8 8 6.9 14.1 14.9 14.9a1.4 1.4 0 0 0 1.4-1.4v-2.2a1.4 1.4 0 0 0-1.2-1.4l-3-.5a1.4 1.4 0 0 0-1.3.4l-1.3 1.3a14.8 14.8 0 0 1-5-5l1.3-1.3a1.4 1.4 0 0 0 .4-1.3l-.5-3a1.4 1.4 0 0 0-1.4-1.2Z" />
             </svg>
@@ -161,7 +162,7 @@ export default function CompanyProfile() {
             <svg viewBox="0 0 20 20" fill="none" aria-hidden="true">
               <path d="M2.5 10h14m-5-5 5 5-5 5" />
             </svg>
-          </a>
+          </Link>
         </div>
 
         <div className={styles.visual} aria-label="Our cleanroom solutions">
