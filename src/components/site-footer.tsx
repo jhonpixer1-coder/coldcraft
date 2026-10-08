@@ -111,11 +111,11 @@ export default function SiteFooter() {
               We provide high-quality HVAC systems, cleanroom solutions, and industrial engineering services with a commitment to excellence, reliability, and innovation.
             </p>
             <nav className={styles.socials} aria-label="Social media">
-              <a href="https://www.facebook.com/" aria-label="Facebook"><SocialIcon name="facebook" /></a>
-              <a href="https://x.com/" aria-label="X"><SocialIcon name="x" /></a>
-              <a href="https://www.linkedin.com/" aria-label="LinkedIn"><SocialIcon name="linkedin" /></a>
-              <a href="https://www.instagram.com/" aria-label="Instagram"><SocialIcon name="instagram" /></a>
-              <a href="https://www.youtube.com/" aria-label="YouTube"><SocialIcon name="youtube" /></a>
+              <a href="https://www.facebook.com/coldcraftbd" aria-label="Facebook" target="_blank" rel="noopener noreferrer"><SocialIcon name="facebook" /></a>
+              <a href="https://x.com/" aria-label="X" target="_blank" rel="noopener noreferrer"><SocialIcon name="x" /></a>
+              <a href="https://www.linkedin.com/" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer"><SocialIcon name="linkedin" /></a>
+              <a href="https://www.instagram.com/" aria-label="Instagram" target="_blank" rel="noopener noreferrer"><SocialIcon name="instagram" /></a>
+              <a href="https://www.youtube.com/" aria-label="YouTube" target="_blank" rel="noopener noreferrer"><SocialIcon name="youtube" /></a>
             </nav>
           </section>
 

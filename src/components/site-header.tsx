@@ -31,24 +31,24 @@ export default function SiteHeader({ activePage = "Home" }: { activePage?: strin
               Open now, until 6:00 PM
             </span>
             <div className={styles.socialLinks} aria-label="Social media">
-              <a href="https://www.facebook.com/" aria-label="Facebook">
+              <a href="https://www.facebook.com/coldcraftbd" aria-label="Facebook" target="_blank" rel="noopener noreferrer">
                 <svg aria-hidden="true" viewBox="0 0 24 24">
                   <path d="M14.2 21v-8h2.7l.4-3.1h-3.1v-2c0-.9.3-1.5 1.6-1.5h1.7V3.6c-.3 0-1.3-.1-2.5-.1-2.5 0-4.2 1.5-4.2 4.3v2.1H8v3.1h2.8v8h3.4Z" />
                 </svg>
               </a>
-              <a href="https://x.com/" aria-label="X">
+              <a href="https://x.com/" aria-label="X" target="_blank" rel="noopener noreferrer">
                 <svg aria-hidden="true" viewBox="0 0 24 24">
                   <path d="M18.9 3h2.8l-6.1 7 7.2 11h-5.6l-4.4-6.8-5.9 6.8H4l6.5-7.5L3.6 3h5.7l4 6.3L18.9 3Zm-1 16h1.5L8.4 4.9H6.8L17.9 19Z" />
                 </svg>
               </a>
-              <a href="https://www.instagram.com/" aria-label="Instagram">
+              <a href="https://www.instagram.com/" aria-label="Instagram" target="_blank" rel="noopener noreferrer">
                 <svg aria-hidden="true" viewBox="0 0 24 24" fill="none">
                   <rect x="3.5" y="3.5" width="17" height="17" rx="5" />
                   <circle cx="12" cy="12" r="4" />
                   <circle className={styles.socialDot} cx="17.5" cy="6.8" r="1" />
                 </svg>
               </a>
-              <a href="https://www.youtube.com/" aria-label="YouTube">
+              <a href="https://www.youtube.com/" aria-label="YouTube" target="_blank" rel="noopener noreferrer">
                 <svg aria-hidden="true" viewBox="0 0 24 24" fill="none">
                   <path d="M21 7.2a2.5 2.5 0 0 0-1.8-1.8C17.6 5 12 5 12 5s-5.6 0-7.2.4A2.5 2.5 0 0 0 3 7.2a26 26 0 0 0-.4 4.8 26 26 0 0 0 .4 4.8 2.5 2.5 0 0 0 1.8 1.8C6.4 19 12 19 12 19s5.6 0 7.2-.4a2.5 2.5 0 0 0 1.8-1.8 26 26 0 0 0 .4-4.8 26 26 0 0 0-.4-4.8Z" />
                   <path className={styles.playIcon} d="m10 15.5 5-3.5-5-3.5v7Z" />
