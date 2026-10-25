@@ -1,0 +1,361 @@
+.page {
+  color: #10233c;
+}
+
+.hero {
+  position: relative;
+  min-height: 250px;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+  background: #071d35;
+  isolation: isolate;
+}
+
+.heroBackdrop {
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+  background-image:
+    linear-gradient(90deg, rgb(4 18 35 / 82%), rgb(4 18 35 / 58%)),
+    url("/company-team.jpg");
+  background-position: center;
+  background-size: cover;
+  filter: saturate(0.8) contrast(1.08);
+  transform: scale(1.04);
+  animation: backdropEnter 1.2s cubic-bezier(0.2, 0.7, 0.2, 1) both;
+}
+
+.heroContent {
+  padding: 40px 20px;
+  color: #fff;
+  text-align: center;
+  animation: contentEnter 700ms cubic-bezier(0.2, 0.7, 0.2, 1) both;
+}
+
+.kicker {
+  margin: 0 0 8px;
+  color: #f1c55a;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.heroContent h1 {
+  margin: 0;
+  font-size: clamp(2.2rem, 4vw, 3.5rem);
+  font-weight: 800;
+  line-height: 1.1;
+}
+
+.breadcrumbs {
+  margin-top: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  color: rgb(255 255 255 / 80%);
+  font-size: 12px;
+}
+
+.breadcrumbs a {
+  color: rgb(255 255 255 / 85%);
+  text-decoration: none;
+  transition: color 180ms ease;
+}
+
+.breadcrumbs a:hover {
+  color: #fff;
+}
+
+.scrollLink {
+  margin-top: 20px;
+  padding: 9px 16px;
+  border: 1px solid rgb(255 255 255 / 42%);
+  border-radius: 999px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: #fff;
+  font-size: 13px;
+  font-weight: 650;
+  text-decoration: none;
+  transition:
+    background-color 180ms ease,
+    border-color 180ms ease,
+    transform 180ms ease;
+}
+
+.scrollLink:hover {
+  transform: translateY(2px);
+  border-color: #fff;
+  background: rgb(255 255 255 / 12%);
+}
+
+.scrollLink svg {
+  width: 16px;
+  height: 16px;
+  stroke: currentColor;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 1.7;
+}
+
+.scrollLink:focus-visible,
+.breadcrumbs a:focus-visible,
+.imageButton:focus-visible,
+.actions a:focus-visible,
+.actions button:focus-visible,
+.closeButton:focus-visible {
+  outline: 3px solid #20a8f4;
+  outline-offset: 3px;
+}
+
+.section {
+  background: #f3f7fc;
+  color: #0c1f4a;
+  scroll-margin-top: 144px;
+}
+
+.wrap {
+  width: min(100% - 48px, 1120px);
+  margin-inline: auto;
+  padding-block: 40px 72px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr));
+  gap: 20px;
+}
+
+.personCard {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 12px;
+  border: 1px solid #d6e1f2;
+  border-radius: 22px;
+  background: #fff;
+  box-shadow: 0 10px 28px rgb(10 25 43 / 5%);
+  animation: cardEnter 650ms cubic-bezier(0.2, 0.7, 0.2, 1) both;
+  transition:
+    transform 200ms ease,
+    box-shadow 200ms ease,
+    border-color 200ms ease;
+}
+
+.personCard:nth-child(2) {
+  animation-delay: 70ms;
+}
+
+.personCard:nth-child(3) {
+  animation-delay: 140ms;
+}
+
+.personCard:nth-child(4) {
+  animation-delay: 210ms;
+}
+
+.personCard:nth-child(5) {
+  animation-delay: 280ms;
+}
+
+.personCard:nth-child(6) {
+  animation-delay: 350ms;
+}
+
+.personCard:nth-child(7) {
+  animation-delay: 420ms;
+}
+
+.personCard:nth-child(8) {
+  animation-delay: 490ms;
+}
+
+.personCard:nth-child(9) {
+  animation-delay: 560ms;
+}
+
+.personCard:hover {
+  transform: translateY(-4px);
+  border-color: #bfd3f4;
+  box-shadow: 0 18px 35px rgb(10 25 43 / 10%);
+}
+
+.imageButton {
+  display: block;
+  padding: 0;
+  border: 0;
+  border-radius: 16px;
+  background: transparent;
+  cursor: zoom-in;
+}
+
+.contactCardImage {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 16px;
+  transition: transform 400ms cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+
+.imageButton {
+  overflow: hidden;
+}
+
+.imageButton:hover .contactCardImage {
+  transform: scale(1.025);
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: auto;
+}
+
+.actions a,
+.actions button {
+  flex: 1 1 auto;
+  padding: 10px 12px;
+  border: 1px solid #d6e1f2;
+  border-radius: 12px;
+  background: transparent;
+  color: #0c1f4a;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.4;
+  text-align: center;
+  text-decoration: none;
+  transition:
+    background-color 180ms ease,
+    border-color 180ms ease,
+    color 180ms ease,
+    transform 180ms ease;
+}
+
+.actions a:hover,
+.actions button:hover {
+  transform: translateY(-1px);
+}
+
+.actions .whatsapp {
+  border-color: #27a844;
+  background: #27a844;
+  color: #fff;
+}
+
+.actions .share {
+  border-color: #1b5fc4;
+  background: #1b5fc4;
+  color: #fff;
+}
+
+.shareStatus {
+  min-height: 22px;
+  margin: 12px 0 0;
+  color: #4d5f82;
+  font-size: 14px;
+}
+
+.previewDialog {
+  max-width: min(92vw, 560px);
+  padding: 0;
+  border: 0;
+  background: transparent;
+}
+
+.previewDialog::backdrop {
+  background: rgb(5 12 32 / 72%);
+}
+
+.previewImage {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 22px;
+}
+
+.previewDialog form {
+  margin-top: 12px;
+  text-align: center;
+}
+
+.closeButton {
+  padding: 10px 22px;
+  border: 0;
+  border-radius: 999px;
+  background: #fff;
+  color: #0c1f4a;
+  cursor: pointer;
+  font: inherit;
+  font-weight: 600;
+}
+
+@keyframes contentEnter {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes backdropEnter {
+  from {
+    opacity: 0.55;
+    transform: scale(1.1);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1.04);
+  }
+}
+
+@keyframes cardEnter {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 480px) {
+  .hero {
+    min-height: 220px;
+  }
+
+  .wrap {
+    width: min(100% - 32px, 1120px);
+    padding-block: 32px 56px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .heroBackdrop,
+  .heroContent,
+  .personCard {
+    animation: none;
+  }
+
+  .breadcrumbs a,
+  .scrollLink,
+  .personCard,
+  .contactCardImage,
+  .actions a,
+  .actions button {
+    transition: none;
+  }
+}

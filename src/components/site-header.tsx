@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import styles from "./site-header.module.css";
 
-const navigation = ["Home", "About", "Projects", "Products", "Contact"];
+const navigation = ["Home", "About", "Team", "Projects", "Products", "Contact"];
 
 export default function SiteHeader({ activePage = "Home" }: { activePage?: string } = {}) {
   return (
@@ -82,11 +82,13 @@ export default function SiteHeader({ activePage = "Home" }: { activePage?: strin
                       ? "/#home"
                       : item === "About"
                         ? "/about"
-                        : item === "Projects"
-                          ? "/projects"
-                          : item === "Products"
-                            ? "/products"
-                            : "/contact"
+                        : item === "Team"
+                          ? "/team"
+                          : item === "Projects"
+                            ? "/projects"
+                            : item === "Products"
+                              ? "/products"
+                              : "/contact"
                   }
                   aria-current={item === activePage ? "page" : undefined}
                   key={item}
