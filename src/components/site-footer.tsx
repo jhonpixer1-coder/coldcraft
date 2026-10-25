@@ -2,6 +2,11 @@ import Image from "next/image";
 import Link from "next/link";
 import styles from "./site-footer.module.css";
 
+const officeAddress = "Sara Aftab Tower, 29 Ring Rd, Dhaka 1207";
+const officeMapUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(
+  officeAddress,
+)}`;
+
 const quickLinks = [
   { label: "Home", href: "/#home" },
   { label: "About Us", href: "/about" },
@@ -138,8 +143,8 @@ export default function SiteFooter() {
             <ul className={styles.contactList}>
               <li>
                 <span className={styles.contactIcon}><ContactIcon name="pin" /></span>
-                <a href="https://www.google.com/maps/search/?api=1&query=2%2FM%2F3+Golden+Street%2C+Ring+Road%2C+Shamoly%2C+Mohammadpur%2C+Dhaka-1207" target="_blank" rel="noreferrer">
-                  2/M/3 Golden Street, Ring Road, Shamoly, Mohammadpur, Dhaka-1207
+                <a href={officeMapUrl} target="_blank" rel="noreferrer">
+                  {officeAddress}
                 </a>
               </li>
               <li>
@@ -169,10 +174,10 @@ export default function SiteFooter() {
             </Link>
             <a
               className={styles.map}
-              href="https://www.google.com/maps/search/?api=1&query=2%2FM%2F3+Golden+Street%2C+Ring+Road%2C+Shamoly%2C+Mohammadpur%2C+Dhaka-1207"
+              href={officeMapUrl}
               target="_blank"
               rel="noreferrer"
-              aria-label="View Cold Craft Engineering at 2/M/3 Golden Street, Shamoly, Mohammadpur on Google Maps"
+              aria-label={`View Cold Craft Engineering at ${officeAddress} on Google Maps`}
             >
               <span className={styles.mapShape} aria-hidden="true" />
               <span className={styles.mapPin} aria-hidden="true"><ContactIcon name="pin" /></span>

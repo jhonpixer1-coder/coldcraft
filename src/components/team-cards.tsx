@@ -60,6 +60,12 @@ const teamMembers = [
     email: "designcceltd@gmail.com",
     card: "/team/jashim-uddin.png",
   },
+  {
+    name: "Md. Selim Khan",
+    phone: "+8801911305020",
+    email: "selim20serviceteam@gmail.com",
+    card: "/team/md-selim-khan.png",
+  },
 ];
 
 type TeamMember = (typeof teamMembers)[number];

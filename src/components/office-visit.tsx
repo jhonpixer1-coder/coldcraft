@@ -4,7 +4,7 @@ import { useState, useSyncExternalStore } from "react";
 import styles from "./office-visit.module.css";
 
 const officeAddress =
-  "2/M/3 Golden Street, Ring Road, Shamoly, Mohammadpur, Dhaka-1207";
+  "Sara Aftab Tower, 29 Ring Rd, Dhaka 1207";
 const directionsUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(
   `COLD CRAFT ENGINEERING LIMITED, ${officeAddress}`,
 )}`;

@@ -178,6 +178,10 @@
   animation-delay: 560ms;
 }
 
+.personCard:nth-child(10) {
+  animation-delay: 630ms;
+}
+
 .personCard:hover {
   transform: translateY(-4px);
   border-color: #bfd3f4;
@@ -350,6 +354,12 @@
   .wrap {
     width: min(100% - 32px, 1120px);
     padding-block: 32px 56px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .personCard:last-child {
+    grid-column: 2;
   }
 }
 
